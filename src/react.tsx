@@ -8,6 +8,11 @@ export class RelativeTime extends React.PureComponent<{
     relativeTime = "";
     title = "";
     timer: NodeJS.Timer;
+    isHovering = false;
+
+    get timeText() {
+        return this.isHovering ? this.title : this.relativeTime;
+    }
 
     componentWillMount() {
         this.relativeTime = common.getRelativeTime(this.props.time, this.props.locale);
@@ -25,9 +30,19 @@ export class RelativeTime extends React.PureComponent<{
         }
     }
 
+    mouseenter() {
+        this.isHovering = true;
+        this.setState({ isHovering: this.isHovering });
+    }
+
+    mouseleave() {
+        this.isHovering = false;
+        this.setState({ isHovering: this.isHovering });
+    }
+
     render() {
         return (
-            <span title={this.title}>{this.relativeTime}</span>
+            <span title={this.title} onMouseEnter={() => this.mouseenter()} onMouseLeave={() => this.mouseleave()}>{this.timeText}</span>
         );
     }
 }

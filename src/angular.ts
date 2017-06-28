@@ -15,6 +15,11 @@ export class RelativeTimeComponent {
     relativeTime = "";
     title = "";
     timer: NodeJS.Timer;
+    isHovering = false;
+
+    get timeText() {
+        return this.isHovering ? this.title : this.relativeTime;
+    }
 
     ngOnInit() {
         this.relativeTime = common.getRelativeTime(this.time, this.locale);
@@ -28,5 +33,13 @@ export class RelativeTimeComponent {
         if (this.timer) {
             clearInterval(this.timer);
         }
+    }
+
+    mouseenter() {
+        this.isHovering = true;
+    }
+
+    mouseleave() {
+        this.isHovering = false;
     }
 }

@@ -14,6 +14,11 @@ class RelativeTime extends Vue {
     relativeTime = "";
     title = "";
     timer: NodeJS.Timer;
+    isHovering = false;
+
+    get timeText() {
+        return this.isHovering ? this.title : this.relativeTime;
+    }
 
     beforeMount() {
         this.relativeTime = common.getRelativeTime(this.time, this.locale);
@@ -27,6 +32,14 @@ class RelativeTime extends Vue {
         if (this.timer) {
             clearInterval(this.timer);
         }
+    }
+
+    mouseenter() {
+        this.isHovering = true;
+    }
+
+    mouseleave() {
+        this.isHovering = false;
     }
 }
 

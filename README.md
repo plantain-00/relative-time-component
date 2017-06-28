@@ -19,12 +19,6 @@ A auto-updated vuejs, reactjs and angular relative time component.
 
 `npm i relative-time-component`
 
-#### link css
-
-```html
-<link rel="stylesheet" href="./node_modules/relative-time-component/dist/relative-time.min.css" />
-```
-
 #### vuejs component demo
 
 `npm i vue vue-class-component`
