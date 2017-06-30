@@ -13,7 +13,9 @@
     "revStatic": "rev-static --config demo/rev-static.config.js",
     "tslint": "tslint \"src/**/*.ts\" \"src/**/*.tsx\"",
     "build": "npm run cleanRev && npm run clean && npm run file2variable && npm run tsc && npm run cleancssDemo && npm run webpack && npm run revStatic",
-    "lint": "npm run tslint"
+    "lint": "npm run tslint && npm run standard",
+    "standard": "standard \"**/*.config.js\"",
+    "fix": "standard --fix \"**/*.config.js\""
   },
   "repository": {
     "type": "git",
@@ -43,6 +45,7 @@
     "rev-static": "2.4.2",
     "rimraf": "2.6.1",
     "rxjs": "5.4.1",
+    "standard": "10.0.2",
     "stylelint-config-standard": "16.0.0",
     "tslint": "5.4.3",
     "typescript": "2.4.0",
