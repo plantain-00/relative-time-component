@@ -1,5 +1,6 @@
 import { Component, Input } from "@angular/core";
 import * as common from "./common";
+export * from "./common";
 import { srcAngularTemplateHtml } from "./angular-variables";
 
 @Component({

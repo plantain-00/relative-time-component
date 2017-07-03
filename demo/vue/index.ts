@@ -1,7 +1,7 @@
 import Vue from "vue";
 import Component from "vue-class-component";
 import "../../dist/vue";
-import { Locale } from "../../dist/common";
+import { Locale } from "../../dist/vue";
 
 @Component({
     template: `

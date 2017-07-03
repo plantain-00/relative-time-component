@@ -1,7 +1,6 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
-import { RelativeTime } from "../../dist/react";
-import { Locale } from "../../dist/common";
+import { RelativeTime, Locale } from "../../dist/react";
 
 class Main extends React.Component<{}, {}> {
     locale: Locale | null = null;

@@ -1,5 +1,6 @@
 import * as React from "react";
 import * as common from "./common";
+export * from "./common";
 
 export class RelativeTime extends React.PureComponent<{
     time: Date | number;
