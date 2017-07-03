@@ -2,10 +2,10 @@ import Vue from "vue";
 import Component from "vue-class-component";
 import * as common from "./common";
 export * from "./common";
-import { srcVueTemplateHtml } from "./vue-variables";
+import { vueTemplateHtml } from "./vue-variables";
 
 @Component({
-    template: srcVueTemplateHtml,
+    template: vueTemplateHtml,
     props: ["time", "locale"],
 })
 class RelativeTime extends Vue {
@@ -14,7 +14,7 @@ class RelativeTime extends Vue {
 
     relativeTime = "";
     title = "";
-    timer: NodeJS.Timer;
+    timer: number;
     isHovering = false;
 
     get timeText() {

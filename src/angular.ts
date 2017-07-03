@@ -1,11 +1,11 @@
 import { Component, Input } from "@angular/core";
 import * as common from "./common";
 export * from "./common";
-import { srcAngularTemplateHtml } from "./angular-variables";
+import { angularTemplateHtml } from "./angular-variables";
 
 @Component({
     selector: "relative-time",
-    template: srcAngularTemplateHtml,
+    template: angularTemplateHtml,
 })
 export class RelativeTimeComponent {
     @Input()
@@ -15,7 +15,7 @@ export class RelativeTimeComponent {
 
     relativeTime = "";
     title = "";
-    timer: NodeJS.Timer;
+    timer: number;
     isHovering = false;
 
     get timeText() {
