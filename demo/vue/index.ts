@@ -3,15 +3,12 @@ import Component from "vue-class-component";
 import "../../dist/vue";
 import { Locale } from "../../dist/vue";
 
+let locale: Locale | null = null;
+
 @Component({
     template: `
     <div>
         <a href="https://github.com/plantain-00/relative-time-component/tree/master/demo/vue/index.ts" target="_blank">the source code of the demo</a>
-        <br/>
-        <select @change="change($event)">
-            <option value="">default</option>
-            <option value="zh-CN">zh-CN</option>
-        </select>
         <br/>
         <relative-time :time="time1" :locale="locale"></relative-time>
         <br/>
@@ -60,7 +57,7 @@ import { Locale } from "../../dist/vue";
     `,
 })
 class App extends Vue {
-    locale: Locale | null = null;
+    locale = locale;
 
     time1 = Date.now() - 1000 * 60 * 60 * 24 * 365 * 5;
     time2 = Date.now() - 1000 * 60 * 60 * 24 * 365;
@@ -84,18 +81,20 @@ class App extends Vue {
     time20 = Date.now() + 1000 * 60 * 60 * 24 * 30 * 5;
     time21 = Date.now() + 1000 * 60 * 60 * 24 * 365;
     time22 = Date.now() + 1000 * 60 * 60 * 24 * 365 * 5;
-
-    change(e: UIEvent) {
-        const localeName = (e.target as HTMLSelectElement).value;
-        if (localeName) {
-            import("../../dist/locales/" + localeName + ".js").then(module => {
-                this.locale = module.locale;
-            });
-        } else {
-            this.locale = null;
-        }
-    }
 }
 
-// tslint:disable-next-line:no-unused-expression
-new App({ el: "#container" });
+function start() {
+    // tslint:disable-next-line:no-unused-expression
+    new App({ el: "#container" });
+}
+
+if (navigator.language === "zh-CN") {
+    import ("../../dist/locales/" + navigator.language + ".js").then(module => {
+        locale = module.locale;
+        start();
+    }, error => {
+        start();
+    });
+} else {
+    start();
+}

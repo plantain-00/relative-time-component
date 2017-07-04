@@ -2,8 +2,10 @@ import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { RelativeTime, Locale } from "../../dist/react";
 
+let locale: Locale | null = null;
+
 class Main extends React.Component<{}, {}> {
-    locale: Locale | null = null;
+    locale = locale;
 
     time1 = Date.now() - 1000 * 60 * 60 * 24 * 365 * 5;
     time2 = Date.now() - 1000 * 60 * 60 * 24 * 365;
@@ -32,11 +34,6 @@ class Main extends React.Component<{}, {}> {
         return (
             <div>
                 <a href="https://github.com/plantain-00/RelativeTime-component/tree/master/demo/react/index.tsx" target="_blank">the source code of the demo</a>
-                <br/>
-                <select onChange={e => this.change(e)}>
-                    <option value="">default</option>
-                    <option value="zh-CN">zh-CN</option>
-                </select>
                 <br/>
                 <RelativeTime time={this.time1} locale={this.locale}></RelativeTime>
                 <br/>
@@ -84,19 +81,19 @@ class Main extends React.Component<{}, {}> {
             </div>
         );
     }
-
-    change(e: React.ChangeEvent<HTMLSelectElement>) {
-        const localeName = e.target.value;
-        if (localeName) {
-            import("../../dist/locales/" + localeName + ".js").then(module => {
-                this.locale = module.locale;
-                this.setState({ locale: this.locale });
-            });
-        } else {
-            this.locale = null;
-            this.setState({ locale: this.locale });
-        }
-    }
 }
 
-ReactDOM.render(<Main />, document.getElementById("container"));
+function start() {
+    ReactDOM.render(<Main />, document.getElementById("container"));
+}
+
+if (navigator.language === "zh-CN") {
+    import ("../../dist/locales/" + navigator.language + ".js").then(module => {
+        locale = module.locale;
+        start();
+    }, error => {
+        start();
+    });
+} else {
+    start();
+}

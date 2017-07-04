@@ -9,16 +9,13 @@ enableProdMode();
 
 import { Component } from "@angular/core";
 
+let locale: Locale | null = null;
+
 @Component({
     selector: "app",
     template: `
     <div>
         <a href="https://github.com/plantain-00/relative-time-component/tree/master/demo/angular/index.ts" target="_blank">the source code of the demo</a>
-        <br/>
-        <select (change)="change($event)">
-            <option value="">default</option>
-            <option value="zh-CN">zh-CN</option>
-        </select>
         <br/>
         <relative-time [time]="time1" [locale]="locale"></relative-time>
         <br/>
@@ -67,7 +64,7 @@ import { Component } from "@angular/core";
     `,
 })
 export class MainComponent {
-    locale: Locale | null = null;
+    locale = locale;
 
     time1 = Date.now() - 1000 * 60 * 60 * 24 * 365 * 5;
     time2 = Date.now() - 1000 * 60 * 60 * 24 * 365;
@@ -91,17 +88,6 @@ export class MainComponent {
     time20 = Date.now() + 1000 * 60 * 60 * 24 * 30 * 5;
     time21 = Date.now() + 1000 * 60 * 60 * 24 * 365;
     time22 = Date.now() + 1000 * 60 * 60 * 24 * 365 * 5;
-
-    change(e: UIEvent) {
-        const localeName = (e.target as HTMLSelectElement).value;
-        if (localeName) {
-            import("../../dist/locales/" + localeName + ".js").then(module => {
-                this.locale = module.locale;
-            });
-        } else {
-            this.locale = null;
-        }
-    }
 }
 
 import { NgModule } from "@angular/core";
@@ -116,4 +102,17 @@ import { RelativeTimeComponent, Locale } from "../../dist/angular";
 })
 class MainModule { }
 
-platformBrowserDynamic().bootstrapModule(MainModule);
+function start() {
+    platformBrowserDynamic().bootstrapModule(MainModule);
+}
+
+if (navigator.language === "zh-CN") {
+    import ("../../dist/locales/" + navigator.language + ".js").then(module => {
+        locale = module.locale;
+        start();
+    }, error => {
+        start();
+    });
+} else {
+    start();
+}
