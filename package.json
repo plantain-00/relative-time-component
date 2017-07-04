@@ -11,7 +11,7 @@
     "cleancssDemo": "cleancss -o demo/index.bundle.css ./node_modules/github-fork-ribbon-css/gh-fork-ribbon.css",
     "webpack": "webpack --config demo/webpack.config.js",
     "revStatic": "rev-static --config demo/rev-static.config.js",
-    "tslint": "tslint \"src/**/*.ts\" \"src/**/*.tsx\"",
+    "tslint": "tslint \"src/**/*.ts\" \"src/**/*.tsx\" \"demo/**/*.ts\" \"demo/**/*.tsx\"",
     "build": "npm run cleanRev && npm run clean && npm run file2variable && npm run tsc && npm run cleancssDemo && npm run webpack && npm run revStatic",
     "lint": "npm run tslint && npm run standard",
     "standard": "standard \"**/*.config.js\"",
