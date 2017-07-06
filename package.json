@@ -4,7 +4,7 @@
   "description": "A auto-updated vuejs, reactjs and angular relative time component.",
   "main": "index.js",
   "scripts": {
-    "cleanRev": "rimraf demo/**/index.bundle-*.js demo/*.bundle-*.css",
+    "cleanRev": "rimraf demo/**/index.bundle-*.js demo/*.bundle-*.css demo/**/*.index.bundle-*.js",
     "clean": "rimraf dist/",
     "file2variable": "file2variable-cli src/vue.template.html -o src/vue-variables.ts --html-minify --base src && file2variable-cli src/angular.template.html -o src/angular-variables.ts --html-minify --base src",
     "tsc": "tsc -p src/ && tsc -p demo/",
@@ -50,7 +50,7 @@
     "karma-webpack": "2.0.3",
     "react": "15.6.1",
     "react-dom": "15.6.1",
-    "rev-static": "2.7.1",
+    "rev-static": "3.0.2",
     "rimraf": "2.6.1",
     "rxjs": "5.4.1",
     "standard": "10.0.2",
