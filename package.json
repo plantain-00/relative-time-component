@@ -1,6 +1,6 @@
 {
   "name": "relative-time-component",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "A auto-updated vuejs, reactjs and angular relative time component.",
   "main": "index.js",
   "scripts": {
@@ -16,7 +16,8 @@
     "lint": "npm run tslint && npm run standard",
     "standard": "standard \"**/*.config.js\"",
     "fix": "standard --fix \"**/*.config.js\"",
-    "test": "tsc -p spec && karma start spec/karma.config.js"
+    "test": "tsc -p spec && karma start spec/karma.config.js",
+    "release": "clean-release"
   },
   "repository": {
     "type": "git",
@@ -39,6 +40,7 @@
     "@types/react": "15.0.34",
     "@types/react-dom": "15.5.1",
     "clean-css-cli": "4.1.6",
+    "clean-release": "1.0.3",
     "core-js": "2.4.1",
     "file2variable-cli": "1.4.0",
     "github-fork-ribbon-css": "0.2.1",
