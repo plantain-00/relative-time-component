@@ -24,7 +24,7 @@ A auto-updated vuejs, reactjs and angular relative time component.
 `npm i vue vue-class-component`
 
 ```ts
-import "relative-time-component/dist/vue";
+import "relative-time-component/vue";
 ```
 
 ```html
@@ -37,7 +37,7 @@ the online demo: https://plantain-00.github.io/relative-time-component/demo/vue/
 #### reactjs component demo
 
 ```ts
-import { RelativeTime } from "relative-time-component/dist/react";
+import { RelativeTime } from "relative-time-component/react";
 ```
 
 ```jsx
@@ -50,7 +50,7 @@ the online demo: https://plantain-00.github.io/relative-time-component/demo/reac
 #### angular component demo
 
 ```ts
-import { RelativeTimeComponent } from "relative-time-component/dist/angular";
+import { RelativeTimeComponent } from "relative-time-component/angular";
 
 @NgModule({
     imports: [BrowserModule, FormsModule],
@@ -101,4 +101,14 @@ type Locale = {
     yearsAgo: (years: number) => string;
     inYears: (years: number) => string;
 };
+```
+
+#### change logs
+
+```ts
+// v2
+import "relative-time-component/vue";
+
+// v1
+import "relative-time-component/dist/vue";
 ```
