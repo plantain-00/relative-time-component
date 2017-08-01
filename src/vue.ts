@@ -14,7 +14,7 @@ class RelativeTime extends Vue {
 
     relativeTime = "";
     title = "";
-    timer: number;
+    timer: NodeJS.Timer;
     isHovering = false;
 
     get timeText() {

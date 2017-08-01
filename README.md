@@ -1,6 +1,7 @@
 [![Dependency Status](https://david-dm.org/plantain-00/relative-time-component.svg)](https://david-dm.org/plantain-00/relative-time-component)
 [![devDependency Status](https://david-dm.org/plantain-00/relative-time-component/dev-status.svg)](https://david-dm.org/plantain-00/relative-time-component#info=devDependencies)
-[![Build Status](https://travis-ci.org/plantain-00/relative-time-component.svg?branch=master)](https://travis-ci.org/plantain-00/relative-time-component)
+[![Build Status: Linux](https://travis-ci.org/plantain-00/relative-time-component.svg?branch=master)](https://travis-ci.org/plantain-00/relative-time-component)
+[![Build Status: Windows](https://ci.appveyor.com/api/projects/status/github/plantain-00/relative-time-component?branch=master&svg=true)](https://ci.appveyor.com/project/plantain-00/relative-time-component/branch/master)
 [![npm version](https://badge.fury.io/js/relative-time-component.svg)](https://badge.fury.io/js/relative-time-component)
 [![Downloads](https://img.shields.io/npm/dm/relative-time-component.svg)](https://www.npmjs.com/package/relative-time-component)
 

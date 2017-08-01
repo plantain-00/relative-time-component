@@ -8,7 +8,7 @@ export class RelativeTime extends React.PureComponent<{
 }, {}> {
     relativeTime = "";
     title = "";
-    timer: number;
+    timer: NodeJS.Timer;
     isHovering = false;
 
     get timeText() {

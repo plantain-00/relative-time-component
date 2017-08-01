@@ -15,7 +15,7 @@ export class RelativeTimeComponent {
 
     relativeTime = "";
     title = "";
-    timer: number;
+    timer: NodeJS.Timer;
     isHovering = false;
 
     get timeText() {
