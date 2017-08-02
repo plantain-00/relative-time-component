@@ -7,7 +7,7 @@ module.exports = {
     `tsc -p src`,
     `tsc -p demo`,
     `cleancss -o demo/index.bundle.css ./node_modules/github-fork-ribbon-css/gh-fork-ribbon.css`,
-    `webpack --config demo/webpack.config.js`,
+    `webpack --display-modules --config demo/webpack.config.js`,
     `rev-static --config demo/rev-static.config.js`
   ],
   lint: [
