@@ -18,6 +18,7 @@
         "jsx": "react",
         "experimentalDecorators": true,
         "allowSyntheticDefaultImports": true,
-        "downlevelIteration": true
+        "downlevelIteration": true,
+        "emitDecoratorMetadata": true
     }
 }
