@@ -51,11 +51,11 @@ the online demo: https://plantain-00.github.io/relative-time-component/demo/reac
 #### angular component demo
 
 ```ts
-import { RelativeTimeComponent } from "relative-time-component/angular";
+import { RelativeTimeModule } from "relative-time-component/angular";
 
 @NgModule({
-    imports: [BrowserModule, FormsModule],
-    declarations: [MainComponent, RelativeTimeComponent],
+    imports: [BrowserModule, FormsModule, RelativeTimeModule],
+    declarations: [MainComponent],
     bootstrap: [MainComponent],
 })
 class MainModule { }

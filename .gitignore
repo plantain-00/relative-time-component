@@ -68,3 +68,4 @@ dist
 !**/*-*.css
 service-worker.js
 !*.index.bundle.js
+src/compiled

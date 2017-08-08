@@ -1,4 +1,5 @@
-import { Component, Input } from "@angular/core";
+import { Component, Input, NgModule } from "@angular/core";
+import { CommonModule } from "@angular/common";
 import * as common from "./common";
 export * from "./common";
 import { angularTemplateHtml } from "./angular-variables";
@@ -44,3 +45,16 @@ export class RelativeTimeComponent {
         this.isHovering = false;
     }
 }
+
+@NgModule({
+    declarations: [
+        RelativeTimeComponent,
+    ],
+    imports: [
+        CommonModule,
+    ],
+    exports: [
+        RelativeTimeComponent,
+    ],
+})
+export class RelativeTimeModule { }

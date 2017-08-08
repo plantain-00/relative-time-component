@@ -16,5 +16,12 @@
         "allowSyntheticDefaultImports": true,
         "downlevelIteration": true,
         "emitDecoratorMetadata": true
-    }
+    },
+    "angularCompilerOptions": {
+        "strictMetadataEmit": true,
+        "genDir": "compiled"
+    },
+    "exclude": [
+        "./compiled/"
+    ]
 }
