@@ -4,6 +4,9 @@ import * as common from "./common";
 export * from "./common";
 import { angularTemplateHtml } from "./angular-variables";
 
+/**
+ * @public
+ */
 @Component({
     selector: "relative-time",
     template: angularTemplateHtml,
@@ -46,6 +49,9 @@ export class RelativeTimeComponent {
     }
 }
 
+/**
+ * @public
+ */
 @NgModule({
     declarations: [
         RelativeTimeComponent,

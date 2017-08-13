@@ -1,5 +1,8 @@
 import { Locale } from "../common";
 
+/**
+ * @public
+ */
 export const locale: Locale = {
     secondsAgo: (seconds: number) => `几秒前`,
     inSeconds: (seconds: number) => `几秒后`,

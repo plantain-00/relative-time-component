@@ -63,7 +63,7 @@ let locale: Locale | null = null;
     </div>
     `,
 })
-export class MainComponent {
+class MainComponent {
     locale = locale;
 
     time1 = Date.now() - 1000 * 60 * 60 * 24 * 365 * 5;

@@ -2,6 +2,9 @@ import * as React from "react";
 import * as common from "./common";
 export * from "./common";
 
+/**
+ * @public
+ */
 export class RelativeTime extends React.PureComponent<{
     time: Date | number;
     locale?: common.Locale | null;
