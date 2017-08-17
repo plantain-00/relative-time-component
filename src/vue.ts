@@ -12,10 +12,10 @@ class RelativeTime extends Vue {
     time: Date | number;
     locale: common.Locale | null;
 
-    relativeTime = "";
     title = "";
-    timer: NodeJS.Timer;
-    isHovering = false;
+    private relativeTime = "";
+    private timer: NodeJS.Timer;
+    private isHovering = false;
 
     get timeText() {
         return this.isHovering ? this.title : this.relativeTime;

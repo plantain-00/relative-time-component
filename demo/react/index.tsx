@@ -5,30 +5,30 @@ import { RelativeTime, Locale } from "../../dist/react";
 let locale: Locale | null = null;
 
 class Main extends React.Component<{}, {}> {
-    locale = locale;
+    private locale = locale;
 
-    time1 = Date.now() - 1000 * 60 * 60 * 24 * 365 * 5;
-    time2 = Date.now() - 1000 * 60 * 60 * 24 * 365;
-    time3 = Date.now() - 1000 * 60 * 60 * 24 * 30 * 5;
-    time4 = Date.now() - 1000 * 60 * 60 * 24 * 30;
-    time5 = Date.now() - 1000 * 60 * 60 * 24 * 10;
-    time6 = Date.now() - 1000 * 60 * 60 * 24;
-    time7 = Date.now() - 1000 * 60 * 60 * 15;
-    time8 = Date.now() - 1000 * 60 * 60;
-    time9 = Date.now() - 1000 * 60 * 15;
-    time10 = Date.now() - 1000 * 60;
-    time11 = Date.now() - 1000 * 15;
-    time12 = Date.now() + 1000 * 15;
-    time13 = Date.now() + 1000 * 60;
-    time14 = Date.now() + 1000 * 60 * 15;
-    time15 = Date.now() + 1000 * 60 * 60;
-    time16 = Date.now() + 1000 * 60 * 60 * 15;
-    time17 = Date.now() + 1000 * 60 * 60 * 24;
-    time18 = Date.now() + 1000 * 60 * 60 * 24 * 10;
-    time19 = Date.now() + 1000 * 60 * 60 * 24 * 30;
-    time20 = Date.now() + 1000 * 60 * 60 * 24 * 30 * 5;
-    time21 = Date.now() + 1000 * 60 * 60 * 24 * 365;
-    time22 = Date.now() + 1000 * 60 * 60 * 24 * 365 * 5;
+    private time1 = Date.now() - 1000 * 60 * 60 * 24 * 365 * 5;
+    private time2 = Date.now() - 1000 * 60 * 60 * 24 * 365;
+    private time3 = Date.now() - 1000 * 60 * 60 * 24 * 30 * 5;
+    private time4 = Date.now() - 1000 * 60 * 60 * 24 * 30;
+    private time5 = Date.now() - 1000 * 60 * 60 * 24 * 10;
+    private time6 = Date.now() - 1000 * 60 * 60 * 24;
+    private time7 = Date.now() - 1000 * 60 * 60 * 15;
+    private time8 = Date.now() - 1000 * 60 * 60;
+    private time9 = Date.now() - 1000 * 60 * 15;
+    private time10 = Date.now() - 1000 * 60;
+    private time11 = Date.now() - 1000 * 15;
+    private time12 = Date.now() + 1000 * 15;
+    private time13 = Date.now() + 1000 * 60;
+    private time14 = Date.now() + 1000 * 60 * 15;
+    private time15 = Date.now() + 1000 * 60 * 60;
+    private time16 = Date.now() + 1000 * 60 * 60 * 15;
+    private time17 = Date.now() + 1000 * 60 * 60 * 24;
+    private time18 = Date.now() + 1000 * 60 * 60 * 24 * 10;
+    private time19 = Date.now() + 1000 * 60 * 60 * 24 * 30;
+    private time20 = Date.now() + 1000 * 60 * 60 * 24 * 30 * 5;
+    private time21 = Date.now() + 1000 * 60 * 60 * 24 * 365;
+    private time22 = Date.now() + 1000 * 60 * 60 * 24 * 365 * 5;
 
     render() {
         return (
