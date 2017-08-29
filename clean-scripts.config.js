@@ -19,6 +19,9 @@ module.exports = {
     async () => {
       const { createServer } = require('http-server')
       const puppeteer = require('puppeteer')
+      const fs = require('fs')
+      const beautify = require('js-beautify').html
+      const parse5 = require('parse5')
       const server = createServer()
       server.listen(8000)
       const browser = await puppeteer.launch()
@@ -28,6 +31,17 @@ module.exports = {
         await page.goto(`http://localhost:8000/demo/${type}`)
         await page.waitFor(1000)
         await page.screenshot({ path: `demo/${type}/screenshot.png`, fullPage: true })
+        const content = await page.content()
+        const document = parse5.parse(content)
+        forEach(document, node => {
+          if (node.attrs) {
+            const attr = node.attrs.find(a => a.name === 'title')
+            if (attr) {
+              attr.value = '[title]'
+            }
+          }
+        })
+        fs.writeFileSync(`demo/${type}/screenshot-src.html`, beautify(parse5.serialize(document)))
       }
       server.close()
       browser.close()
@@ -70,5 +84,14 @@ module.exports = {
     demo: `tsc -p demo --watch`,
     webpack: `webpack --config demo/webpack.config.js --watch`,
     rev: `rev-static --config demo/rev-static.config.js --watch`
+  }
+}
+
+function forEach (node, callback) {
+  callback(node)
+  if (node.childNodes) {
+    for (const childNode of node.childNodes) {
+      forEach(childNode, callback)
+    }
   }
 }
