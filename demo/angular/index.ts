@@ -3,11 +3,9 @@ import "core-js/es7/reflect";
 import "zone.js/dist/zone";
 
 import { platformBrowserDynamic } from "@angular/platform-browser-dynamic";
-import { enableProdMode } from "@angular/core";
+import { enableProdMode, Component, NgModule } from "@angular/core";
 
 enableProdMode();
-
-import { Component } from "@angular/core";
 
 let locale: Locale | null = null;
 
@@ -90,7 +88,6 @@ class MainComponent {
     time22 = Date.now() + 1000 * 60 * 60 * 24 * 365 * 5;
 }
 
-import { NgModule } from "@angular/core";
 import { BrowserModule } from "@angular/platform-browser";
 import { FormsModule } from "@angular/forms";
 import { RelativeTimeModule, Locale } from "../../dist/angular";

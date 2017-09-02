@@ -1,5 +1,6 @@
 import Vue from "vue";
 import Component from "vue-class-component";
+// tslint:disable-next-line:no-duplicate-imports
 import "../../dist/vue";
 import { Locale } from "../../dist/vue";
 
