@@ -58,7 +58,7 @@ module.exports = {
   test: [
     'tsc -p spec',
     'karma start spec/karma.config.js',
-    'git checkout demo/**/screenshot.png',
+    'git checkout "demo/**/screenshot.png"',
     async () => {
       const { stdout } = await execAsync('git status -s')
       if (stdout) {
