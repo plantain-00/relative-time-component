@@ -19,6 +19,7 @@
         "experimentalDecorators": true,
         "allowSyntheticDefaultImports": true,
         "downlevelIteration": true,
-        "emitDecoratorMetadata": true
+        "emitDecoratorMetadata": true,
+        "newLine": "LF"
     }
 }
