@@ -3,22 +3,29 @@ const { Service, execAsync } = require('clean-scripts')
 const tsFiles = `"src/**/*.ts" "src/**/*.tsx" "spec/**/*.ts" "demo/**/*.ts" "demo/**/*.tsx" "screenshots/**/*.ts"`
 const jsFiles = `"*.config.js" "demo/*.config.js" "spec/**/*.config.js"`
 
+const vueTemplateCommand = `file2variable-cli src/vue.template.html -o src/vue-variables.ts --html-minify --base src`
+const angularTemplateCommand = `file2variable-cli src/angular.template.html -o src/angular-variables.ts --html-minify --base src`
+const ngcSrcCommand = `ngc -p src`
+const tscDemoCommand = `tsc -p demo`
+const webpackCommand = `webpack --display-modules --config demo/webpack.config.js`
+const revStaticCommand = `rev-static --config demo/rev-static.config.js`
+
 module.exports = {
   build: [
     `rimraf dist/`,
     `mkdirp dist/`,
     {
       js: [
-        `file2variable-cli src/vue.template.html -o src/vue-variables.ts --html-minify --base src`,
-        `file2variable-cli src/angular.template.html -o src/angular-variables.ts --html-minify --base src`,
-        `ngc -p src`,
-        `tsc -p demo`,
-        `webpack --display-modules --config demo/webpack.config.js`
+        vueTemplateCommand,
+        angularTemplateCommand,
+        ngcSrcCommand,
+        tscDemoCommand,
+        webpackCommand
       ],
       css: `cleancss -o demo/index.bundle.css ./node_modules/github-fork-ribbon-css/gh-fork-ribbon.css`,
       clean: `rimraf demo/**/index.bundle-*.js demo/*.bundle-*.css demo/**/*.index.bundle-*.js`
     },
-    `rev-static --config demo/rev-static.config.js`
+    revStaticCommand
   ],
   lint: {
     ts: `tslint ${tsFiles}`,
@@ -42,12 +49,12 @@ module.exports = {
   },
   release: `clean-release`,
   watch: {
-    vue: `file2variable-cli src/vue.template.html -o src/vue-variables.ts --html-minify --base src --watch`,
-    angular: `file2variable-cli src/angular.template.html -o src/angular-variables.ts --html-minify --base src --watch`,
-    src: `tsc -p src --watch`,
-    demo: `tsc -p demo --watch`,
-    webpack: `webpack --config demo/webpack.config.js --watch`,
-    rev: `rev-static --config demo/rev-static.config.js --watch`
+    vue: `${vueTemplateCommand} --watch`,
+    angular: `${angularTemplateCommand} --watch`,
+    src: `${ngcSrcCommand} --watch`,
+    demo: `${tscDemoCommand} --watch`,
+    webpack: `${webpackCommand} --watch`,
+    rev: `${revStaticCommand} --watch`
   },
   screenshot: [
     new Service(`http-server -p 8000`),
