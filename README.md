@@ -53,6 +53,9 @@ the online demo: https://plantain-00.github.io/relative-time-component/demo/reac
 ```ts
 import { RelativeTimeModule } from "relative-time-component/angular";
 
+// for angular AOT:
+// import { RelativeTimeModule } from "relative-time-component/aot/angular";
+
 @NgModule({
     imports: [BrowserModule, FormsModule, RelativeTimeModule],
     declarations: [MainComponent],
@@ -105,6 +108,14 @@ type Locale = {
 ```
 
 #### change logs
+
+```ts
+// v2 angular AOT:
+import { RelativeTimeModule } from "relative-time-component/angular";
+
+// v3 angular AOT:
+import { RelativeTimeModule } from "relative-time-component/aot/angular";
+```
 
 ```ts
 // v2
