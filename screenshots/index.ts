@@ -10,13 +10,13 @@ import * as puppeteer from "puppeteer";
         await page.emulate({ viewport: { width: 1440, height: 900 }, userAgent: "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36" });
         await page.goto(`http://localhost:8000/demo/${type}`);
         await page.waitFor(100);
-        await page.screenshot({ path: `screenshots/${type}-initial.png`, fullPage: true });
+        await page.screenshot({ path: `screenshots/${type}-initial.png` });
     }
 
     await pages.vue.waitFor(60000);
 
     for (const type of ["vue", "react", "angular"]) {
-        await pages[type].screenshot({ path: `screenshots/${type}-60s.png`, fullPage: true });
+        await pages[type].screenshot({ path: `screenshots/${type}-60s.png` });
     }
 
     browser.close();
