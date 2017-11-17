@@ -15,7 +15,7 @@ import * as puppeteer from "puppeteer";
 
     await pages.vue.waitFor(60000);
 
-    for (const type of ["vue", "react", "angular"]) {
+    for (const type of ["vue", "react", "angular", "aot"]) {
         await pages[type].screenshot({ path: `screenshots/${type}-60s.png` });
     }
 

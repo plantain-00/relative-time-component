@@ -69,4 +69,7 @@ dist
 !**/*-*.css
 service-worker.js
 !*.index.bundle.js
-src/compiled
+demo/**/*.metadata.json
+demo/**/*.ngsummary.json
+demo/aot/*.d.ts
+demo/*.d.ts

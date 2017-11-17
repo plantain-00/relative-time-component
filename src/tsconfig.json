@@ -17,8 +17,5 @@
         "downlevelIteration": true,
         "emitDecoratorMetadata": true,
         "newLine": "LF"
-    },
-    "exclude": [
-        "./compiled/"
-    ]
+    }
 }
