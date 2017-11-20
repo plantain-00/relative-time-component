@@ -1,8 +1,7 @@
 {
   "name": "relative-time-component",
-  "version": "3.0.1",
+  "version": "3.0.2",
   "description": "A auto-updated vuejs, reactjs and angular relative time component.",
-  "main": "index.js",
   "scripts": {
     "build": "clean-scripts build",
     "lint": "clean-scripts lint",
