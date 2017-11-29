@@ -16,16 +16,12 @@ A auto-updated vuejs, reactjs and angular relative time component.
 + auto update
 + multi-language
 
-#### install
+#### vuejs component
 
-`npm i relative-time-component`
-
-#### vuejs component demo
-
-`npm i vue vue-class-component`
+`npm i relative-time-vue-component`
 
 ```ts
-import "relative-time-component/vue";
+import "relative-time-component";
 ```
 
 ```html
@@ -33,12 +29,14 @@ import "relative-time-component/vue";
 </relative-time>
 ```
 
-the online demo: https://plantain-00.github.io/relative-time-component/demo/vue/index.html
+the online demo: https://plantain-00.github.io/relative-time-component/packages/vue/demo
 
-#### reactjs component demo
+#### reactjs component
+
+`npm i relative-time-react-component`
 
 ```ts
-import { RelativeTime } from "relative-time-component/react";
+import { RelativeTime } from "relative-time-react-component";
 ```
 
 ```jsx
@@ -46,15 +44,14 @@ import { RelativeTime } from "relative-time-component/react";
 </RelativeTime>
 ```
 
-the online demo: https://plantain-00.github.io/relative-time-component/demo/react/index.html
+the online demo: https://plantain-00.github.io/relative-time-component/packages/react/demo
 
-#### angular component demo
+#### angular component
+
+`npm i relative-time-angular-component`
 
 ```ts
 import { RelativeTimeModule } from "relative-time-component/angular";
-
-// for angular AOT:
-// import { RelativeTimeModule } from "relative-time-component/aot/angular";
 
 @NgModule({
     imports: [BrowserModule, FormsModule, RelativeTimeModule],
@@ -69,9 +66,9 @@ class MainModule { }
 </relative-time>
 ```
 
-the online demo: https://plantain-00.github.io/relative-time-component/demo/angular/index.html
+the online demo: https://plantain-00.github.io/relative-time-component/packages/vue/demo/jit
 
-the AOT online demo: https://plantain-00.github.io/relative-time-component/demo/aot/index.html
+the AOT online demo: https://plantain-00.github.io/relative-time-component/packages/vue/demo/aot
 
 #### properties and events of the component
 
@@ -110,6 +107,28 @@ type Locale = {
 ```
 
 #### change logs
+
+```bash
+# v3
+npm i relative-time-component
+
+# v4
+npm i relative-time-vue-component
+npm i relative-time-react-component
+npm i relative-time-angular-component
+```
+
+```ts
+// v3
+import "relative-time-component/vue";
+import { RelativeTime } from "relative-time-component/react";
+import { RelativeTimeModule } from "relative-time-component/angular";
+
+// v4
+import "relative-time-vue-component";
+import { RelativeTime } from "relative-time-react-component";
+import { RelativeTimeModule } from "relative-time-angular-component";
+```
 
 ```ts
 // v2 angular AOT:

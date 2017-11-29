@@ -1,26 +1,28 @@
 const { Service, checkGitStatus } = require('clean-scripts')
 
-const tsFiles = `"src/**/*.ts" "src/**/*.tsx" "spec/**/*.ts" "demo/**/*.ts" "demo/**/*.tsx" "screenshots/**/*.ts"`
-const jsFiles = `"*.config.js" "demo/*.config.js" "spec/**/*.config.js"`
-const excludeTsFiles = `"demo/**/*.d.ts"`
+const tsFiles = `"packages/@(core|vue|react|angular)/@(src|demo)/**/*.@(ts|tsx)" "spec/**/*.ts" "screenshots/**/*.ts"`
+const jsFiles = `"*.config.js" "spec/**/*.config.js"`
+const excludeTsFiles = `"packages/@(core|vue|react|angular)/@(src|demo)/**/*.d.ts"`
 
-const vueTemplateCommand = `file2variable-cli src/vue.template.html -o src/vue-variables.ts --html-minify --base src`
-const angularTemplateCommand = `file2variable-cli src/angular.template.html -o src/angular-variables.ts --html-minify --base src`
+const vueTemplateCommand = `file2variable-cli packages/vue/src/*.template.html -o packages/vue/src/variables.ts --html-minify --base packages/vue/src/`
+const angularTemplateCommand = `file2variable-cli packages/angular/src/*.template.html -o packages/angular/src/variables.ts --html-minify --base packages/angular/src`
 const ngcSrcCommand = [
-  `tsc -p src`,
-  `ngc -p src/tsconfig.aot.json`
+  `ngc -p packages/core/src`,
+  `tsc -p packages/vue/src`,
+  `tsc -p packages/react/src`,
+  `ngc -p packages/angular/src`
 ]
 const tscDemoCommand = [
-  `tsc -p demo`,
-  `ngc -p demo/tsconfig.aot.json`
+  `tsc -p packages/vue/demo`,
+  `tsc -p packages/react/demo`,
+  `ngc -p packages/angular/demo`
 ]
-const webpackCommand = `webpack --display-modules --config demo/webpack.config.js`
-const revStaticCommand = `rev-static --config demo/rev-static.config.js`
+const webpackCommand = `webpack`
+const revStaticCommand = `rev-static`
+const cssCommand = `cleancss ./node_modules/github-fork-ribbon-css/gh-fork-ribbon.css -o packages/core/demo/index.bundle.css`
 
 module.exports = {
   build: [
-    `rimraf dist/`,
-    `mkdirp dist/`,
     {
       js: [
         vueTemplateCommand,
@@ -29,8 +31,8 @@ module.exports = {
         tscDemoCommand,
         webpackCommand
       ],
-      css: `cleancss -o demo/index.bundle.css ./node_modules/github-fork-ribbon-css/gh-fork-ribbon.css`,
-      clean: `rimraf demo/**/index.bundle-*.js demo/*.bundle-*.css demo/**/*.index.bundle-*.js`
+      css: cssCommand,
+      clean: `rimraf "packages/@(core|vue|react|angular)/demo/**/@(*.bundle-*.js|*.bundle-*.css)"`
     },
     revStaticCommand
   ],
@@ -49,7 +51,6 @@ module.exports = {
     ts: `tslint --fix ${tsFiles} --exclude ${excludeTsFiles}`,
     js: `standard --fix ${jsFiles}`
   },
-  release: `clean-release`,
   watch: {
     vue: `${vueTemplateCommand} --watch`,
     angular: `${angularTemplateCommand} --watch`,

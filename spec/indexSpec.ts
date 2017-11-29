@@ -1,4 +1,4 @@
-import { getRelativeTime } from "../dist/common";
+import { getRelativeTime } from "../packages/core/dist";
 
 it("", () => {
     expect(getRelativeTime(Date.now() + 1000, null)).toEqual("in a few seconds");
