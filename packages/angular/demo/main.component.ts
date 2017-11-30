@@ -4,7 +4,7 @@ import { Component } from "@angular/core";
     selector: "app",
     template: `
     <div>
-        <a href="https://github.com/plantain-00/relative-time-component/tree/master/demo/angular/index.ts" target="_blank">the source code of the demo</a>
+        <a href="https://github.com/plantain-00/relative-time-component/tree/master/packages/angular/demo" target="_blank">the source code of the demo</a>
         <br/>
         <relative-time [time]="time1" [locale]="locale"></relative-time>
         <br/>

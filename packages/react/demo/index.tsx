@@ -33,7 +33,7 @@ class Main extends React.Component<{}, {}> {
     render() {
         return (
             <div>
-                <a href="https://github.com/plantain-00/RelativeTime-component/tree/master/demo/react/index.tsx" target="_blank">the source code of the demo</a>
+                <a href="https://github.com/plantain-00/RelativeTime-component/tree/master/packages/react/demo" target="_blank">the source code of the demo</a>
                 <br/>
                 <RelativeTime time={this.time1} locale={this.locale}></RelativeTime>
                 <br/>
