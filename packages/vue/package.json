@@ -15,7 +15,7 @@
   },
   "homepage": "https://github.com/plantain-00/relative-time-component#readme",
   "dependencies": {
-    "relative-time-component": "^4.0.0",
+    "relative-time-component": "^4.0.1",
     "vue": "2",
     "vue-class-component": "6"
   }
