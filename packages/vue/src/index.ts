@@ -5,10 +5,10 @@ export * from "relative-time-component";
 import { indexTemplateHtml } from "./variables";
 
 @Component({
-    template: indexTemplateHtml,
+    render: indexTemplateHtml,
     props: ["time", "locale"],
 })
-class RelativeTime extends Vue {
+export class RelativeTime extends Vue {
     time: Date | number;
     locale: common.Locale | null;
 

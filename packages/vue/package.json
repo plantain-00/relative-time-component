@@ -1,6 +1,6 @@
 {
   "name": "relative-time-vue-component",
-  "version": "4.0.2",
+  "version": "4.1.0",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "description": "A auto-updated vuejs relative time component.",
@@ -18,5 +18,8 @@
     "relative-time-component": "^4.0.2",
     "vue": "2",
     "vue-class-component": "6"
+  },
+  "devDependencies": {
+    "typescript": "2.6.2"
   }
 }
