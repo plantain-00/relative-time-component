@@ -8,6 +8,9 @@
     "type": "git",
     "url": "git+https://github.com/plantain-00/relative-time-component.git"
   },
+  "scripts": {
+    "tsc": "tsc -p src"
+  },
   "author": "York Yao",
   "license": "MIT",
   "bugs": {
