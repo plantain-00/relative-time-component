@@ -4,7 +4,7 @@ const tsFiles = `"packages/@(core|vue|react|angular)/@(src|demo)/**/*.@(ts|tsx)"
 const jsFiles = `"*.config.js" "spec/**/*.config.js"`
 const excludeTsFiles = `"packages/@(core|vue|react|angular)/@(src|demo)/**/*.d.ts"`
 
-const vueTemplateCommand = `file2variable-cli packages/vue/src/*.template.html -o packages/vue/src/variables.ts --html-minify --base packages/vue/src/ --vue --vue-type-name "RelativeTime" --vue-type-path "./index"`
+const vueTemplateCommand = `file2variable-cli --config packages/vue/src/file2variable.config.js`
 const angularTemplateCommand = `file2variable-cli packages/angular/src/*.template.html -o packages/angular/src/variables.ts --html-minify --base packages/angular/src`
 const ngcSrcCommand = [
   `ngc -p packages/core/src`,

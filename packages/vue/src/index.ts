@@ -2,10 +2,11 @@ import Vue from "vue";
 import Component from "vue-class-component";
 import * as common from "relative-time-component";
 export * from "relative-time-component";
-import { indexTemplateHtml } from "./variables";
+import { indexTemplateHtml, indexTemplateHtmlStatic } from "./variables";
 
 @Component({
     render: indexTemplateHtml,
+    staticRenderFns: indexTemplateHtmlStatic,
     props: ["time", "locale"],
 })
 export class RelativeTime extends Vue {
