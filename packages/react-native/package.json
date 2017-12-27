@@ -1,0 +1,33 @@
+{
+  "name": "relative-time-react-native-component",
+  "version": "4.2.0",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "description": "A auto-updated react-native relative time component.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/plantain-00/relative-time-component.git"
+  },
+  "author": "York Yao",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/plantain-00/relative-time-component/issues"
+  },
+  "homepage": "https://github.com/plantain-00/relative-time-component#readme",
+  "files": [
+    "dist"
+  ],
+  "dependencies": {
+    "react": "16",
+    "react-native": "*",
+    "relative-time-component": "^4.1.2"
+  },
+  "devDependencies": {
+    "@types/react": "16.0.31",
+    "@types/react-native": "0.51.7"
+  },
+  "peerDependencies": {
+    "react": "16",
+    "relative-time-component": "^4.1.2"
+  }
+}

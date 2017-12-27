@@ -6,12 +6,13 @@
 [![Downloads](https://img.shields.io/npm/dm/relative-time-component.svg)](https://www.npmjs.com/package/relative-time-component)
 
 # relative-time-component
-A auto-updated vuejs, reactjs and angular relative time component.
+A auto-updated vuejs, reactjs, react-native and angular relative time component.
 
 #### features
 
 + vuejs component
 + reactjs component
++ react-native component
 + angular component
 + auto update
 + multi-language
@@ -45,6 +46,19 @@ import { RelativeTime } from "relative-time-react-component";
 ```
 
 the online demo: https://plantain-00.github.io/relative-time-component/packages/react/demo
+
+#### react-native component
+
+`npm i relative-time-react-native-component`
+
+```ts
+import { RelativeTime } from "relative-time-react-native-component";
+```
+
+```jsx
+<RelativeTime time={this.time}>
+</RelativeTime>
+```
 
 #### angular component
 

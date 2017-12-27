@@ -1,8 +1,8 @@
 const { Service, checkGitStatus } = require('clean-scripts')
 
-const tsFiles = `"packages/@(core|vue|react|angular)/@(src|demo)/**/*.@(ts|tsx)" "spec/**/*.ts" "screenshots/**/*.ts"`
+const tsFiles = `"packages/@(core|vue|react|react-native|angular)/@(src|demo)/**/*.@(ts|tsx)" "spec/**/*.ts" "screenshots/**/*.ts"`
 const jsFiles = `"*.config.js" "spec/**/*.config.js"`
-const excludeTsFiles = `"packages/@(core|vue|react|angular)/@(src|demo)/**/*.d.ts"`
+const excludeTsFiles = `"packages/@(core|vue|react|react-native|angular)/@(src|demo)/**/*.d.ts"`
 
 const vueTemplateCommand = `file2variable-cli --config packages/vue/src/file2variable.config.js`
 const angularTemplateCommand = `file2variable-cli packages/angular/src/*.template.html -o packages/angular/src/variables.ts --html-minify --base packages/angular/src`
@@ -10,7 +10,8 @@ const ngcSrcCommand = [
   `ngc -p packages/core/src`,
   `cd ./packages/vue/ && npm run tsc`,
   `tsc -p packages/react/src`,
-  `ngc -p packages/angular/src`
+  `ngc -p packages/angular/src`,
+  `tsc -p packages/react-native/src`
 ]
 const tscDemoCommand = [
   `tsc -p packages/vue/demo`,
