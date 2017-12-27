@@ -21,7 +21,7 @@ A auto-updated vuejs, reactjs and angular relative time component.
 `npm i relative-time-vue-component`
 
 ```ts
-import "relative-time-component";
+import "relative-time-vue-component";
 ```
 
 ```html
