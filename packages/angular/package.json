@@ -1,6 +1,6 @@
 {
   "name": "relative-time-angular-component",
-  "version": "4.1.1",
+  "version": "4.1.2",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "description": "A auto-updated angular relative time component.",
@@ -14,11 +14,14 @@
     "url": "https://github.com/plantain-00/relative-time-component/issues"
   },
   "homepage": "https://github.com/plantain-00/relative-time-component#readme",
+  "files": [
+    "dist"
+  ],
   "dependencies": {
     "@angular/common": "5",
     "@angular/core": "5",
     "@angular/forms": "5",
-    "relative-time-component": "^4.1.1"
+    "relative-time-component": "^4.1.2"
   },
   "devDependencies": {
     "@angular/platform-browser": "5.1.2",
