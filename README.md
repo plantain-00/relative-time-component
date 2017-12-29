@@ -1,3 +1,5 @@
+# relative-time-component
+
 [![Dependency Status](https://david-dm.org/plantain-00/relative-time-component.svg)](https://david-dm.org/plantain-00/relative-time-component)
 [![devDependency Status](https://david-dm.org/plantain-00/relative-time-component/dev-status.svg)](https://david-dm.org/plantain-00/relative-time-component#info=devDependencies)
 [![Build Status: Linux](https://travis-ci.org/plantain-00/relative-time-component.svg?branch=master)](https://travis-ci.org/plantain-00/relative-time-component)
@@ -5,10 +7,9 @@
 [![npm version](https://badge.fury.io/js/relative-time-component.svg)](https://badge.fury.io/js/relative-time-component)
 [![Downloads](https://img.shields.io/npm/dm/relative-time-component.svg)](https://www.npmjs.com/package/relative-time-component)
 
-# relative-time-component
 A auto-updated vuejs, reactjs, react-native and angular relative time component.
 
-#### features
+## features
 
 + vuejs component
 + reactjs component
@@ -17,7 +18,7 @@ A auto-updated vuejs, reactjs, react-native and angular relative time component.
 + auto update
 + multi-language
 
-#### vuejs component
+## vuejs component
 
 `npm i relative-time-vue-component`
 
@@ -30,9 +31,9 @@ import "relative-time-vue-component";
 </relative-time>
 ```
 
-the online demo: https://plantain-00.github.io/relative-time-component/packages/vue/demo
+the online demo: <https://plantain-00.github.io/relative-time-component/packages/vue/demo>
 
-#### reactjs component
+## reactjs component
 
 `npm i relative-time-react-component`
 
@@ -45,9 +46,9 @@ import { RelativeTime } from "relative-time-react-component";
 </RelativeTime>
 ```
 
-the online demo: https://plantain-00.github.io/relative-time-component/packages/react/demo
+the online demo: <https://plantain-00.github.io/relative-time-component/packages/react/demo>
 
-#### react-native component
+## react-native component
 
 `npm i relative-time-react-native-component`
 
@@ -60,7 +61,7 @@ import { RelativeTime } from "relative-time-react-native-component";
 </RelativeTime>
 ```
 
-#### angular component
+## angular component
 
 `npm i relative-time-angular-component`
 
@@ -80,18 +81,18 @@ class MainModule { }
 </relative-time>
 ```
 
-the online demo: https://plantain-00.github.io/relative-time-component/packages/vue/demo/jit
+the online demo: <https://plantain-00.github.io/relative-time-component/packages/vue/demo/jit>
 
-the AOT online demo: https://plantain-00.github.io/relative-time-component/packages/vue/demo/aot
+the AOT online demo: <https://plantain-00.github.io/relative-time-component/packages/vue/demo/aot>
 
-#### properties and events of the component
+## properties and events of the component
 
 name | type | description
 --- | --- | ---
 time | Date or number | the time
 locale | [Locale](#relative-time-locale-structure)[] | the locale object
 
-#### relative-time locale structure
+## relative-time locale structure
 
 ```ts
 type Locale = {
@@ -120,7 +121,7 @@ type Locale = {
 };
 ```
 
-#### change logs
+## change logs
 
 ```bash
 # v3

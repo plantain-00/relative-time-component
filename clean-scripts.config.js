@@ -41,7 +41,8 @@ module.exports = {
     ts: `tslint ${tsFiles} --exclude ${excludeTsFiles}`,
     js: `standard ${jsFiles}`,
     export: `no-unused-export ${tsFiles} --exclude ${excludeTsFiles}`,
-    commit: `commitlint --from=HEAD~1`
+    commit: `commitlint --from=HEAD~1`,
+    markdown: `markdownlint README.md`
   },
   test: [
     'tsc -p spec',
