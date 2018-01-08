@@ -2,13 +2,15 @@
 # yarn lockfile v1
 
 
-"@types/react-native@0.51.7":
-  version "0.51.7"
-  resolved "https://registry.yarnpkg.com/@types/react-native/-/react-native-0.51.7.tgz#4efed51d1267a288a7fba12d1ee72f67395a95e1"
+"@types/react-native@0.51.9":
+  version "0.51.9"
+  resolved "https://registry.yarnpkg.com/@types/react-native/-/react-native-0.51.9.tgz#a2435957444aa3205387a162b72374578f303b43"
+  dependencies:
+    "@types/react" "*"
 
-"@types/react@16.0.31":
-  version "16.0.31"
-  resolved "https://registry.yarnpkg.com/@types/react/-/react-16.0.31.tgz#5285da62f3ac62b797f6d0729a1d6181f3180c3e"
+"@types/react@*", "@types/react@16.0.34":
+  version "16.0.34"
+  resolved "https://registry.yarnpkg.com/@types/react/-/react-16.0.34.tgz#7a8f795afd8a404a9c4af9539b24c75d3996914e"
 
 abbrev@1:
   version "1.1.1"
@@ -2531,14 +2533,20 @@ p-finally@^1.0.0:
   resolved "https://registry.yarnpkg.com/p-finally/-/p-finally-1.0.0.tgz#3fbcfb15b899a44123b34b6dcc18b724336a2cae"
 
 p-limit@^1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/p-limit/-/p-limit-1.1.0.tgz#b07ff2d9a5d88bec806035895a2bab66a27988bc"
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/p-limit/-/p-limit-1.2.0.tgz#0e92b6bedcb59f022c13d0f1949dc82d15909f1c"
+  dependencies:
+    p-try "^1.0.0"
 
 p-locate@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/p-locate/-/p-locate-2.0.0.tgz#20a0103b222a70c8fd39cc2e580680f3dde5ec43"
   dependencies:
     p-limit "^1.1.0"
+
+p-try@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/p-try/-/p-try-1.0.0.tgz#cbc79cdbaf8fd4228e13f621f2b1a237c1b207b3"
 
 parse-glob@^3.0.4:
   version "3.0.4"
@@ -3383,8 +3391,8 @@ ua-parser-js@^0.7.9:
   resolved "https://registry.yarnpkg.com/ua-parser-js/-/ua-parser-js-0.7.17.tgz#e9ec5f9498b9ec910e7ae3ac626a805c4d09ecac"
 
 uglify-es@^3.1.8:
-  version "3.3.3"
-  resolved "https://registry.yarnpkg.com/uglify-es/-/uglify-es-3.3.3.tgz#095f5314d2a5d27e215390e50fa90751473dac2f"
+  version "3.3.5"
+  resolved "https://registry.yarnpkg.com/uglify-es/-/uglify-es-3.3.5.tgz#cf7e695da81999f85196b15e2978862f13212f88"
   dependencies:
     commander "~2.12.1"
     source-map "~0.6.1"
