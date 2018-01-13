@@ -9,8 +9,12 @@ export class RelativeTime extends React.PureComponent<{
     time: Date | number;
     locale?: common.Locale | null;
 }, {}> {
-    private relativeTime = "";
-    private title = "";
+    private get relativeTime() {
+        return common.getRelativeTime(this.props.time, this.props.locale);
+    }
+    private get title() {
+        return common.format(this.props.time);
+    }
     private timer: NodeJS.Timer;
     private isHovering = false;
 
@@ -19,12 +23,8 @@ export class RelativeTime extends React.PureComponent<{
     }
 
     componentWillMount() {
-        this.relativeTime = common.getRelativeTime(this.props.time, this.props.locale);
-        this.title = common.format(this.props.time);
-        this.setState({ relativeTime: this.relativeTime, title: this.title });
         this.timer = setInterval(() => {
-            this.relativeTime = common.getRelativeTime(this.props.time, this.props.locale);
-            this.setState({ relativeTime: this.relativeTime });
+            this.forceUpdate();
         }, 60 * 1000);
     }
 

@@ -1,11 +1,9 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
-import { RelativeTime, Locale } from "../dist/";
-
-let locale: Locale | null = null;
+import { RelativeTime } from "../dist/";
 
 class Main extends React.Component<{}, {}> {
-    private locale = locale;
+    private locale = null;
 
     private time1 = Date.now() - 1000 * 60 * 60 * 24 * 365 * 5;
     private time2 = Date.now() - 1000 * 60 * 60 * 24 * 365;
@@ -29,6 +27,15 @@ class Main extends React.Component<{}, {}> {
     private time20 = Date.now() + 1000 * 60 * 60 * 24 * 30 * 5;
     private time21 = Date.now() + 1000 * 60 * 60 * 24 * 365;
     private time22 = Date.now() + 1000 * 60 * 60 * 24 * 365 * 5;
+
+    componentWillMount() {
+        if (navigator.language === "zh-CN") {
+            import("../../core/dist/locales/" + navigator.language + ".js").then(module => {
+                this.locale = module.locale;
+                this.setState({ locale: this.locale });
+            });
+        }
+    }
 
     render() {
         return (
@@ -83,17 +90,4 @@ class Main extends React.Component<{}, {}> {
     }
 }
 
-function start() {
-    ReactDOM.render(<Main />, document.getElementById("container"));
-}
-
-if (navigator.language === "zh-CN") {
-    import("../../core/dist/locales/" + navigator.language + ".js").then(module => {
-        locale = module.locale;
-        start();
-    }, error => {
-        start();
-    });
-} else {
-    start();
-}
+ReactDOM.render(<Main />, document.getElementById("container"));

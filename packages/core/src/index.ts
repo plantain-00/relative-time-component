@@ -54,7 +54,7 @@ const defaultLocale: Locale = {
 /**
  * @public
  */
-export function getRelativeTime(time: Date | number, locale: Locale | undefined | null) {
+export function getRelativeTime(time: Date | number, locale: Locale | undefined | null, forceUpdateFlag?: boolean) {
     if (!locale) {
         locale = defaultLocale;
     }

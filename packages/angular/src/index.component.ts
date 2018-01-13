@@ -17,20 +17,23 @@ export class RelativeTimeComponent {
     @Input()
     locale: common.Locale | null;
 
-    title = "";
-    private relativeTime = "";
+    get title() {
+        return common.format(this.time);
+    }
+    private get relativeTime() {
+        return common.getRelativeTime(this.time, this.locale, this.forceUpdateFlag);
+    }
     private timer: NodeJS.Timer;
     private isHovering = false;
+    private forceUpdateFlag = false;
 
     get timeText() {
         return this.isHovering ? this.title : this.relativeTime;
     }
 
     ngOnInit() {
-        this.relativeTime = common.getRelativeTime(this.time, this.locale);
-        this.title = common.format(this.time);
         this.timer = setInterval(() => {
-            this.relativeTime = common.getRelativeTime(this.time, this.locale);
+            this.forceUpdateFlag = !this.forceUpdateFlag;
         }, 60 * 1000);
     }
 

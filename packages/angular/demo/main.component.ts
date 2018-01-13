@@ -77,4 +77,12 @@ export class MainComponent {
     time20 = Date.now() + 1000 * 60 * 60 * 24 * 30 * 5;
     time21 = Date.now() + 1000 * 60 * 60 * 24 * 365;
     time22 = Date.now() + 1000 * 60 * 60 * 24 * 365 * 5;
+
+    ngOnInit() {
+        if (navigator.language === "zh-CN") {
+            import("../../core/dist/locales/" + navigator.language + ".js").then(module => {
+                this.locale = module.locale;
+            });
+        }
+    }
 }
