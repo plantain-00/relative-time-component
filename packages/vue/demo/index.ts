@@ -1,10 +1,10 @@
-import Vue from "vue";
-import Component from "vue-class-component";
+import Vue from 'vue'
+import Component from 'vue-class-component'
 // tslint:disable:no-duplicate-imports
-import "../dist/";
+import '../dist/'
 
 @Component({
-    template: `
+  template: `
     <div>
         <a href="https://github.com/plantain-00/relative-time-component/tree/master/packages/vue/demo" target="_blank">the source code of the demo</a>
         <br/>
@@ -52,41 +52,42 @@ import "../dist/";
         <br/>
         <relative-time :time="time22" :locale="locale"></relative-time>
     </div>
-    `,
+    `
 })
 class App extends Vue {
-    locale = null;
+  locale = null
 
-    time1 = Date.now() - 1000 * 60 * 60 * 24 * 365 * 5;
-    time2 = Date.now() - 1000 * 60 * 60 * 24 * 365;
-    time3 = Date.now() - 1000 * 60 * 60 * 24 * 30 * 5;
-    time4 = Date.now() - 1000 * 60 * 60 * 24 * 30;
-    time5 = Date.now() - 1000 * 60 * 60 * 24 * 10;
-    time6 = Date.now() - 1000 * 60 * 60 * 24;
-    time7 = Date.now() - 1000 * 60 * 60 * 15;
-    time8 = Date.now() - 1000 * 60 * 60;
-    time9 = Date.now() - 1000 * 60 * 15;
-    time10 = Date.now() - 1000 * 60;
-    time11 = Date.now() - 1000 * 15;
-    time12 = Date.now() + 1000 * 15;
-    time13 = Date.now() + 1000 * 60;
-    time14 = Date.now() + 1000 * 60 * 15;
-    time15 = Date.now() + 1000 * 60 * 60;
-    time16 = Date.now() + 1000 * 60 * 60 * 15;
-    time17 = Date.now() + 1000 * 60 * 60 * 24;
-    time18 = Date.now() + 1000 * 60 * 60 * 24 * 10;
-    time19 = Date.now() + 1000 * 60 * 60 * 24 * 30;
-    time20 = Date.now() + 1000 * 60 * 60 * 24 * 30 * 5;
-    time21 = Date.now() + 1000 * 60 * 60 * 24 * 365;
-    time22 = Date.now() + 1000 * 60 * 60 * 24 * 365 * 5;
+  time1 = Date.now() - 1000 * 60 * 60 * 24 * 365 * 5
+  time2 = Date.now() - 1000 * 60 * 60 * 24 * 365
+  time3 = Date.now() - 1000 * 60 * 60 * 24 * 30 * 5
+  time4 = Date.now() - 1000 * 60 * 60 * 24 * 30
+  time5 = Date.now() - 1000 * 60 * 60 * 24 * 10
+  time6 = Date.now() - 1000 * 60 * 60 * 24
+  time7 = Date.now() - 1000 * 60 * 60 * 15
+  time8 = Date.now() - 1000 * 60 * 60
+  time9 = Date.now() - 1000 * 60 * 15
+  time10 = Date.now() - 1000 * 60
+  time11 = Date.now() - 1000 * 15
+  time12 = Date.now() + 1000 * 15
+  time13 = Date.now() + 1000 * 60
+  time14 = Date.now() + 1000 * 60 * 15
+  time15 = Date.now() + 1000 * 60 * 60
+  time16 = Date.now() + 1000 * 60 * 60 * 15
+  time17 = Date.now() + 1000 * 60 * 60 * 24
+  time18 = Date.now() + 1000 * 60 * 60 * 24 * 10
+  time19 = Date.now() + 1000 * 60 * 60 * 24 * 30
+  time20 = Date.now() + 1000 * 60 * 60 * 24 * 30 * 5
+  time21 = Date.now() + 1000 * 60 * 60 * 24 * 365
+  time22 = Date.now() + 1000 * 60 * 60 * 24 * 365 * 5
 
-    beforeCreate() {
-        if (navigator.language === "zh-CN") {
-            import("../../core/dist/locales/" + navigator.language + ".js").then(module => {
-                this.locale = module.locale;
-            });
-        }
+  beforeCreate () {
+    if (navigator.language === 'zh-CN') {
+      import('../../core/dist/locales/' + navigator.language + '.js').then(module => {
+        this.locale = module.locale
+      })
     }
+  }
 }
 
-new App({ el: "#container" });
+// tslint:disable-next-line:no-unused-expression
+new App({ el: '#container' })
