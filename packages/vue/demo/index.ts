@@ -1,6 +1,5 @@
 import Vue from 'vue'
 import Component from 'vue-class-component'
-// tslint:disable:no-duplicate-imports
 import '../dist/'
 
 @Component({
