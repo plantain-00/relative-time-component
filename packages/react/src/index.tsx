@@ -36,7 +36,7 @@ export class RelativeTime extends React.PureComponent<{
 
   render () {
     return (
-            <span title={this.title} onMouseEnter={() => this.mouseenter()} onMouseLeave={() => this.mouseleave()}>{this.timeText}</span>
+      <span title={this.title} onMouseEnter={() => this.mouseenter()} onMouseLeave={() => this.mouseleave()}>{this.timeText}</span>
     )
   }
 

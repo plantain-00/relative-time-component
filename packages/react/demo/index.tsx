@@ -39,53 +39,53 @@ class Main extends React.Component<{}, {}> {
 
   render () {
     return (
-            <div>
-                <a href='https://github.com/plantain-00/RelativeTime-component/tree/master/packages/react/demo' target='_blank'>the source code of the demo</a>
-                <br/>
-                <RelativeTime time={this.time1} locale={this.locale}></RelativeTime>
-                <br/>
-                <RelativeTime time={this.time2} locale={this.locale}></RelativeTime>
-                <br/>
-                <RelativeTime time={this.time3} locale={this.locale}></RelativeTime>
-                <br/>
-                <RelativeTime time={this.time4} locale={this.locale}></RelativeTime>
-                <br/>
-                <RelativeTime time={this.time5} locale={this.locale}></RelativeTime>
-                <br/>
-                <RelativeTime time={this.time6} locale={this.locale}></RelativeTime>
-                <br/>
-                <RelativeTime time={this.time7} locale={this.locale}></RelativeTime>
-                <br/>
-                <RelativeTime time={this.time8} locale={this.locale}></RelativeTime>
-                <br/>
-                <RelativeTime time={this.time9} locale={this.locale}></RelativeTime>
-                <br/>
-                <RelativeTime time={this.time10} locale={this.locale}></RelativeTime>
-                <br/>
-                <RelativeTime time={this.time11} locale={this.locale}></RelativeTime>
-                <br/>
-                <RelativeTime time={this.time12} locale={this.locale}></RelativeTime>
-                <br/>
-                <RelativeTime time={this.time13} locale={this.locale}></RelativeTime>
-                <br/>
-                <RelativeTime time={this.time14} locale={this.locale}></RelativeTime>
-                <br/>
-                <RelativeTime time={this.time15} locale={this.locale}></RelativeTime>
-                <br/>
-                <RelativeTime time={this.time16} locale={this.locale}></RelativeTime>
-                <br/>
-                <RelativeTime time={this.time17} locale={this.locale}></RelativeTime>
-                <br/>
-                <RelativeTime time={this.time18} locale={this.locale}></RelativeTime>
-                <br/>
-                <RelativeTime time={this.time19} locale={this.locale}></RelativeTime>
-                <br/>
-                <RelativeTime time={this.time20} locale={this.locale}></RelativeTime>
-                <br/>
-                <RelativeTime time={this.time21} locale={this.locale}></RelativeTime>
-                <br/>
-                <RelativeTime time={this.time22} locale={this.locale}></RelativeTime>
-            </div>
+      <div>
+        <a href='https://github.com/plantain-00/RelativeTime-component/tree/master/packages/react/demo' target='_blank'>the source code of the demo</a>
+        <br />
+        <RelativeTime time={this.time1} locale={this.locale}></RelativeTime>
+        <br />
+        <RelativeTime time={this.time2} locale={this.locale}></RelativeTime>
+        <br />
+        <RelativeTime time={this.time3} locale={this.locale}></RelativeTime>
+        <br />
+        <RelativeTime time={this.time4} locale={this.locale}></RelativeTime>
+        <br />
+        <RelativeTime time={this.time5} locale={this.locale}></RelativeTime>
+        <br />
+        <RelativeTime time={this.time6} locale={this.locale}></RelativeTime>
+        <br />
+        <RelativeTime time={this.time7} locale={this.locale}></RelativeTime>
+        <br />
+        <RelativeTime time={this.time8} locale={this.locale}></RelativeTime>
+        <br />
+        <RelativeTime time={this.time9} locale={this.locale}></RelativeTime>
+        <br />
+        <RelativeTime time={this.time10} locale={this.locale}></RelativeTime>
+        <br />
+        <RelativeTime time={this.time11} locale={this.locale}></RelativeTime>
+        <br />
+        <RelativeTime time={this.time12} locale={this.locale}></RelativeTime>
+        <br />
+        <RelativeTime time={this.time13} locale={this.locale}></RelativeTime>
+        <br />
+        <RelativeTime time={this.time14} locale={this.locale}></RelativeTime>
+        <br />
+        <RelativeTime time={this.time15} locale={this.locale}></RelativeTime>
+        <br />
+        <RelativeTime time={this.time16} locale={this.locale}></RelativeTime>
+        <br />
+        <RelativeTime time={this.time17} locale={this.locale}></RelativeTime>
+        <br />
+        <RelativeTime time={this.time18} locale={this.locale}></RelativeTime>
+        <br />
+        <RelativeTime time={this.time19} locale={this.locale}></RelativeTime>
+        <br />
+        <RelativeTime time={this.time20} locale={this.locale}></RelativeTime>
+        <br />
+        <RelativeTime time={this.time21} locale={this.locale}></RelativeTime>
+        <br />
+        <RelativeTime time={this.time22} locale={this.locale}></RelativeTime>
+      </div>
     )
   }
 }

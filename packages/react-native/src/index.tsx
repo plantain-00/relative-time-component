@@ -39,7 +39,7 @@ export class RelativeTime extends React.PureComponent<{
 
   render () {
     return (
-            <Text onPress={() => this.onPress()}>{this.timeText}</Text>
+      <Text onPress={() => this.onPress()}>{this.timeText}</Text>
     )
   }
 
