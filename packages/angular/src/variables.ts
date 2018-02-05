@@ -4,5 +4,5 @@
  */
 // tslint:disable
 
-export const indexTemplateHtml = `<span [title]="title" (mouseenter)="mouseenter()" (mouseleave)="mouseleave()">{{timeText}}</span>`;
+export const indexTemplateHtml = `<span [title]="title" (mouseenter)="mouseenter()" (mouseleave)="mouseleave()">{{timeText}}</span>`
 // tslint:enable

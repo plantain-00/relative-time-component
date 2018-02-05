@@ -15,7 +15,7 @@ export class RelativeTime extends React.PureComponent<{
   private get title () {
     return common.format(this.props.time)
   }
-  private timer: NodeJS.Timer
+  private timer!: NodeJS.Timer
   private isHovering = false
 
   private get timeText () {

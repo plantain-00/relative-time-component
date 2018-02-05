@@ -13,9 +13,9 @@ import { indexTemplateHtml } from './variables'
 })
 export class RelativeTimeComponent {
   @Input()
-    time: Date | number
+    time!: Date | number
   @Input()
-    locale: common.Locale | null
+    locale!: common.Locale | null
 
   get title () {
     return common.format(this.time)
@@ -23,7 +23,7 @@ export class RelativeTimeComponent {
   private get relativeTime () {
     return common.getRelativeTime(this.time, this.locale, this.forceUpdateFlag)
   }
-  private timer: NodeJS.Timer
+  private timer!: NodeJS.Timer
   private isHovering = false
   private forceUpdateFlag = false
 
