@@ -26,6 +26,14 @@ A auto-updated vuejs, reactjs, react-native and angular relative time component.
 import "relative-time-vue-component";
 ```
 
+or
+
+```html
+<script src="./node_modules/vue/dist/vue.min.js"></script>
+<script src="./node_modules/vue-class-component/dist/vue-class-component.min.js"></script>
+<script src="./node_modules/tree-vue-component/dist/relative-time-vue-component.min.js"></script>
+```
+
 ```html
 <relative-time :time="time">
 </relative-time>
@@ -39,6 +47,14 @@ the online demo: <https://plantain-00.github.io/relative-time-component/packages
 
 ```ts
 import { RelativeTime } from "relative-time-react-component";
+```
+
+or
+
+```html
+<script src="./node_modules/react/umd/react.production.min.js"></script>
+<script src="./node_modules/react-dom/umd/react-dom.production.min.js"></script>
+<script src="./node_modules/tree-react-component/dist/relative-time-react-component.min.js"></script>
 ```
 
 ```jsx
