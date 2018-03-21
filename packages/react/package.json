@@ -2,6 +2,9 @@
   "name": "relative-time-react-component",
   "version": "4.3.0",
   "main": "dist/index.js",
+  "module": "dist/index.js",
+  "unpkg": "dist/relative-time-react-component.min.js",
+  "jsdelivr": "dist/relative-time-react-component.min.js",
   "types": "dist/index.d.ts",
   "description": "A auto-updated reactjs relative time component.",
   "repository": {
