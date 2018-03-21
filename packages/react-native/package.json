@@ -1,6 +1,6 @@
 {
   "name": "relative-time-react-native-component",
-  "version": "4.3.0",
+  "version": "4.3.1",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "description": "A auto-updated react-native relative time component.",
@@ -20,7 +20,7 @@
   "dependencies": {
     "react": "16",
     "react-native": "*",
-    "relative-time-component": "^4.3.0"
+    "relative-time-component": "^4.3.1"
   },
   "devDependencies": {
     "@types/react": "16.0.40",
@@ -29,6 +29,6 @@
   "peerDependencies": {
     "react": "16",
     "react-native": "*",
-    "relative-time-component": "^4.3.0"
+    "relative-time-component": "^4.3.1"
   }
 }
