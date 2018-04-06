@@ -23,8 +23,8 @@
     "relative-time-component": "^4.3.1"
   },
   "devDependencies": {
-    "@types/react": "16.1.0",
-    "@types/react-native": "0.52.22"
+    "@types/react": "16.3.5",
+    "@types/react-native": "0.52.23"
   },
   "peerDependencies": {
     "react": "16",
