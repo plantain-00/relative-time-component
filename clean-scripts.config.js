@@ -1,4 +1,4 @@
-const { Service, checkGitStatus } = require('clean-scripts')
+const { Service } = require('clean-scripts')
 
 const tsFiles = `"packages/@(core|vue|react|react-native|angular)/@(src|demo)/**/*.@(ts|tsx)" "spec/**/*.ts" "screenshots/**/*.ts"`
 const jsFiles = `"*.config.js" "spec/**/*.config.js"`
@@ -25,6 +25,8 @@ const webpackAngularAotCommand = `webpack --config packages/angular/demo/aot/web
 const revStaticCommand = `rev-static`
 const cssCommand = `cleancss ./node_modules/github-fork-ribbon-css/gh-fork-ribbon.css -o packages/core/demo/index.bundle.css`
 
+const isDev = process.env.NODE_ENV === 'development'
+
 module.exports = {
   build: [
     {
@@ -34,13 +36,13 @@ module.exports = {
           vue: [
             vueTemplateCommand,
             tscVueSrcCommand,
-            `rollup --config packages/vue/src/rollup.config.js`,
+            isDev ? undefined : `rollup --config packages/vue/src/rollup.config.js`,
             tscVueDemoCommand,
             webpackVueCommand
           ],
           react: [
             tscReactSrcCommand,
-            `rollup --config packages/react/src/rollup.config.js`,
+            isDev ? undefined : `rollup --config packages/react/src/rollup.config.js`,
             tscReactDemoCommand,
             webpackReactCommand
           ],
@@ -49,7 +51,7 @@ module.exports = {
             tscAngularSrcCommand,
             tscAngularDemoCommand,
             {
-              webpackAngularJitCommand,
+              webpackAngularJitCommand: isDev ? undefined : webpackAngularJitCommand,
               webpackAngularAotCommand
             }
           ],
@@ -70,8 +72,7 @@ module.exports = {
   },
   test: [
     'tsc -p spec',
-    'karma start spec/karma.config.js',
-    () => checkGitStatus()
+    'karma start spec/karma.config.js'
   ],
   fix: {
     ts: `tslint --fix ${tsFiles} --exclude ${excludeTsFiles}`,
