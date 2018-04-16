@@ -1,0 +1,24 @@
+{
+  "name": "relative-time-component",
+  "version": "4.3.1",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "description": "A auto-updated vuejs, reactjs and angular relative time component.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/plantain-00/relative-time-component.git"
+  },
+  "author": "York Yao",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/plantain-00/relative-time-component/issues"
+  },
+  "homepage": "https://github.com/plantain-00/relative-time-component#readme",
+  "files": [
+    "dist"
+  ],
+  "dependencies": {
+    "@types/node": "*",
+    "tslib": "1"
+  }
+}

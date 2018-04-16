@@ -1,0 +1,33 @@
+{
+  "name": "relative-time-vue-component",
+  "version": "4.3.1",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "unpkg": "dist/relative-time-vue-component.min.js",
+  "jsdelivr": "dist/relative-time-vue-component.min.js",
+  "types": "dist/index.d.ts",
+  "description": "A auto-updated vuejs relative time component.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/plantain-00/relative-time-component.git"
+  },
+  "author": "York Yao",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/plantain-00/relative-time-component/issues"
+  },
+  "homepage": "https://github.com/plantain-00/relative-time-component#readme",
+  "files": [
+    "dist"
+  ],
+  "dependencies": {
+    "relative-time-component": "^4.3.1",
+    "vue": "2",
+    "vue-class-component": "6"
+  },
+  "peerDependencies": {
+    "relative-time-component": "^4.3.1",
+    "vue": "2",
+    "vue-class-component": "6"
+  }
+}

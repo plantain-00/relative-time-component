@@ -1,0 +1,36 @@
+{
+  "name": "relative-time-react-component",
+  "version": "4.3.1",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "unpkg": "dist/relative-time-react-component.min.js",
+  "jsdelivr": "dist/relative-time-react-component.min.js",
+  "types": "dist/index.d.ts",
+  "description": "A auto-updated reactjs relative time component.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/plantain-00/relative-time-component.git"
+  },
+  "author": "York Yao",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/plantain-00/relative-time-component/issues"
+  },
+  "homepage": "https://github.com/plantain-00/relative-time-component#readme",
+  "files": [
+    "dist"
+  ],
+  "dependencies": {
+    "react": "16",
+    "relative-time-component": "^4.3.1"
+  },
+  "devDependencies": {
+    "@types/react": "16.3.10",
+    "@types/react-dom": "16.0.5",
+    "react-dom": "16.3.1"
+  },
+  "peerDependencies": {
+    "react": "16",
+    "relative-time-component": "^4.3.1"
+  }
+}
