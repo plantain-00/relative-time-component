@@ -1,14 +1,14 @@
 import * as puppeteer from 'puppeteer'
 
-(async () => {
+(async() => {
   const browser = await puppeteer.launch()
   const pages: { [type: string]: puppeteer.Page } = {}
 
   const cases = [
-        { type: 'vue', url: '/packages/vue/demo' },
-        { type: 'react', url: '/packages/react/demo' },
-        { type: 'angular', url: '/packages/angular/demo/jit' },
-        { type: 'aot', url: '/packages/angular/demo/aot' }
+    { type: 'vue', url: '/packages/vue/demo' },
+    { type: 'react', url: '/packages/react/demo' },
+    { type: 'angular', url: '/packages/angular/demo/jit' },
+    { type: 'aot', url: '/packages/angular/demo/aot' }
   ]
 
   for (const { type, url } of cases) {
