@@ -17,11 +17,11 @@ export class RelativeTime extends React.PureComponent<{
   }
   private timer!: NodeJS.Timer
 
-  private get timeText () {
+  private get timeText() {
     return this.state.isHovering ? this.state.title : this.state.relativeTime
   }
 
-  componentWillMount () {
+  componentWillMount() {
     let relativeTime = common.getRelativeTime(this.props.time, this.props.locale)
     const title = common.format(this.props.time)
     this.setState({ relativeTime, title })
@@ -31,19 +31,19 @@ export class RelativeTime extends React.PureComponent<{
     }, 60 * 1000)
   }
 
-  componentWillUnmount () {
+  componentWillUnmount() {
     if (this.timer) {
       clearInterval(this.timer)
     }
   }
 
-  render () {
+  render() {
     return (
       <Text onPress={() => this.onPress()}>{this.timeText}</Text>
     )
   }
 
-  private onPress () {
+  private onPress() {
     this.setState({ isHovering: !this.state.isHovering })
   }
 }
