@@ -20,6 +20,8 @@ A auto-updated vuejs, reactjs, react-native and angular relative time component.
 
 ## vuejs component
 
+[![gzip size](https://img.badgesize.io/https://unpkg.com/relative-time-vue-component?compression=gzip)](https://unpkg.com/relative-time-vue-component)
+
 `npm i relative-time-vue-component`
 
 ```ts
@@ -42,6 +44,8 @@ or
 the online demo: <https://plantain-00.github.io/relative-time-component/packages/vue/demo>
 
 ## reactjs component
+
+[![gzip size](https://img.badgesize.io/https://unpkg.com/relative-time-react-component?compression=gzip)](https://unpkg.com/relative-time-react-component)
 
 `npm i relative-time-react-component`
 
