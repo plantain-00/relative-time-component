@@ -24,7 +24,7 @@
   },
   "devDependencies": {
     "@types/react": "16.4.6",
-    "@types/react-native": "0.55.28"
+    "@types/react-native": "0.56.0"
   },
   "peerDependencies": {
     "react": "16",
