@@ -4,13 +4,13 @@ import commonjs from 'rollup-plugin-commonjs'
 
 export default {
   input: 'packages/react/dist/index.js',
-  name: 'RelativeTime',
   plugins: [
     resolve({ browser: true }),
     uglify(),
     commonjs()
   ],
   output: {
+    name: 'RelativeTime',
     file: 'packages/react/dist/relative-time-react-component.min.js',
     format: 'umd'
   },
