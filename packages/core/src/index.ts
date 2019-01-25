@@ -55,7 +55,7 @@ const defaultLocale: Locale = {
  * @public
  */
 // tslint:disable-next-line:cognitive-complexity
-export function getRelativeTime(time: Date | number, locale: Locale | undefined | null, forceUpdateFlag?: boolean) {
+export function getRelativeTime(time: Date | number, locale: Locale | undefined | null, forceUpdateFlag = false) {
   if (!locale) {
     locale = defaultLocale
   }
