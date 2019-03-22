@@ -24,6 +24,6 @@
   },
   "devDependencies": {
     "@types/react": "16.8.8",
-    "@types/react-native": "0.57.40"
+    "@types/react-native": "0.57.41"
   }
 }
