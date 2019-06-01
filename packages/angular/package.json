@@ -1,6 +1,6 @@
 {
   "name": "relative-time-angular-component",
-  "version": "4.5.1",
+  "version": "4.6.0",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "description": "A auto-updated angular relative time component.",
@@ -21,7 +21,7 @@
     "@angular/common": "8",
     "@angular/core": "8",
     "@angular/forms": "8",
-    "relative-time-component": "^4.5.1"
+    "relative-time-component": "^4.6.0"
   },
   "devDependencies": {
     "@angular/platform-browser": "8.0.0",
