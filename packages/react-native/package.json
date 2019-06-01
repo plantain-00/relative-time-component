@@ -1,6 +1,6 @@
 {
   "name": "relative-time-react-native-component",
-  "version": "4.5.1",
+  "version": "4.6.0",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "description": "A auto-updated react-native relative time component.",
@@ -20,10 +20,10 @@
   "dependencies": {
     "react": "16",
     "react-native": "*",
-    "relative-time-component": "^4.5.1"
+    "relative-time-component": "^4.6.0"
   },
   "devDependencies": {
-    "@types/react": "16.8.18",
+    "@types/react": "16.8.19",
     "@types/react-native": "0.57.60"
   }
 }

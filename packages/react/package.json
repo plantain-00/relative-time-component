@@ -1,6 +1,6 @@
 {
   "name": "relative-time-react-component",
-  "version": "4.5.1",
+  "version": "4.6.0",
   "main": "dist/index.js",
   "module": "dist/index.js",
   "unpkg": "dist/relative-time-react-component.min.js",
@@ -22,10 +22,10 @@
   ],
   "dependencies": {
     "react": "16",
-    "relative-time-component": "^4.5.1"
+    "relative-time-component": "^4.6.0"
   },
   "devDependencies": {
-    "@types/react": "16.8.18",
+    "@types/react": "16.8.19",
     "@types/react-dom": "16.8.4",
     "react-dom": "16.8.6"
   }
