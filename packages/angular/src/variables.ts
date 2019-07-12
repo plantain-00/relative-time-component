@@ -3,6 +3,8 @@
  * It is not mean to be edited by hand
  */
 // tslint:disable
+/* eslint-disable */
 
 export const indexTemplateHtml = `<span [title]="title" (mouseenter)="mouseenter()" (mouseleave)="mouseleave()">{{timeText}}</span>`
+/* eslint-enable */
 // tslint:enable
