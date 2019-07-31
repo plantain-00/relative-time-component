@@ -19,7 +19,7 @@ export class RelativeTime extends Vue {
   private get relativeTime() {
     return common.getRelativeTime(this.time, this.locale, this.forceUpdateFlag)
   }
-  private timer!: NodeJS.Timer
+  private timer!: number
   private isHovering = false
   private forceUpdateFlag = false
 

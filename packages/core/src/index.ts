@@ -1,7 +1,7 @@
 /**
  * @public
  */
-export type Locale = {
+export interface Locale {
   secondsAgo: (seconds: number) => string;
   inSeconds: (seconds: number) => string;
   oneMinuteAgo: string;
@@ -54,7 +54,6 @@ const defaultLocale: Locale = {
 /**
  * @public
  */
-// tslint:disable-next-line:cognitive-complexity
 export function getRelativeTime(time: Date | number, locale: Locale | undefined | null, forceUpdateFlag = false) {
   if (!locale) {
     locale = defaultLocale
