@@ -64,8 +64,7 @@ module.exports = {
     revStaticCommand
   ],
   lint: {
-    ts: `tslint ${tsFiles} --exclude ${excludeTsFiles}`,
-    js: `standard ${jsFiles}`,
+    ts: `eslint --ext .js,.ts ${tsFiles} ${jsFiles}`,
     export: `no-unused-export ${tsFiles} --exclude ${excludeTsFiles}`,
     commit: `commitlint --from=HEAD~1`,
     markdown: `markdownlint README.md`,
@@ -75,10 +74,7 @@ module.exports = {
     'tsc -p spec',
     'karma start spec/karma.config.js'
   ],
-  fix: {
-    ts: `tslint --fix ${tsFiles} --exclude ${excludeTsFiles}`,
-    js: `standard --fix ${jsFiles}`
-  },
+  fix: `eslint --ext .js,.ts ${tsFiles} ${jsFiles} --fix`,
   watch: {
     vueTemplateCommand: `${vueTemplateCommand} --watch`,
     angularTemplateCommand: `${angularTemplateCommand} --watch`,
