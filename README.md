@@ -8,14 +8,13 @@
 [![Downloads](https://img.shields.io/npm/dm/relative-time-component.svg)](https://www.npmjs.com/package/relative-time-component)
 [![type-coverage](https://img.shields.io/badge/dynamic/json.svg?label=type-coverage&prefix=%E2%89%A5&suffix=%&query=$.typeCoverage.atLeast&uri=https%3A%2F%2Fraw.githubusercontent.com%2Fplantain-00%2Frelative-time-component%2Fmaster%2Fpackage.json)](https://github.com/plantain-00/relative-time-component)
 
-A auto-updated vuejs, reactjs, react-native and angular relative time component.
+A auto-updated vuejs, reactjs and react-native relative time component.
 
 ## features
 
 + vuejs component
 + reactjs component
 + react-native component
-+ angular component
 + auto update
 + multi-language
 
@@ -81,30 +80,6 @@ import { RelativeTime } from "relative-time-react-native-component";
 <RelativeTime time={this.time}>
 </RelativeTime>
 ```
-
-## angular component
-
-`npm i relative-time-angular-component`
-
-```ts
-import { RelativeTimeModule } from "relative-time-component/angular";
-
-@NgModule({
-    imports: [BrowserModule, FormsModule, RelativeTimeModule],
-    declarations: [MainComponent],
-    bootstrap: [MainComponent],
-})
-class MainModule { }
-```
-
-```html
-<relative-time [time]="time">
-</relative-time>
-```
-
-the online demo: <https://plantain-00.github.io/relative-time-component/packages/angular/demo/jit>
-
-the AOT online demo: <https://plantain-00.github.io/relative-time-component/packages/angular/demo/aot>
 
 ## properties and events of the component
 
