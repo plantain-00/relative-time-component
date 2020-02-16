@@ -1,7 +1,7 @@
 {
   "name": "relative-time-vue-component",
   "version": "4.6.0",
-  "main": "dist/index.js",
+  "main": "dist/relative-time-vue-component.min.js",
   "module": "dist/index.js",
   "unpkg": "dist/relative-time-vue-component.min.js",
   "jsdelivr": "dist/relative-time-vue-component.min.js",
