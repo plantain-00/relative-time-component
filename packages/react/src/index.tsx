@@ -22,7 +22,7 @@ export class RelativeTime extends React.PureComponent<{
     return this.isHovering ? this.title : this.relativeTime
   }
 
-  componentWillMount() {
+  UNSAFE_componentWillMount() {
     this.timer = setInterval(() => {
       this.forceUpdate()
     }, 60 * 1000)

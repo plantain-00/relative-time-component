@@ -28,7 +28,7 @@ class Main extends React.Component<{}, {}> {
   private time21 = Date.now() + 1000 * 60 * 60 * 24 * 365
   private time22 = Date.now() + 1000 * 60 * 60 * 24 * 365 * 5
 
-  componentWillMount() {
+  UNSAFE_componentWillMount() {
     if (navigator.language === 'zh-CN') {
       import('../../core/dist/locales/' + navigator.language + '.js').then(module => {
         this.locale = module.locale
