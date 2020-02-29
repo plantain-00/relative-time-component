@@ -21,7 +21,7 @@ export class RelativeTime extends React.PureComponent<{
     return this.state.isHovering ? this.state.title : this.state.relativeTime
   }
 
-  componentWillMount() {
+  UNSAFE_componentWillMount() {
     let relativeTime = common.getRelativeTime(this.props.time, this.props.locale)
     const title = common.format(this.props.time)
     this.setState({ relativeTime, title })
