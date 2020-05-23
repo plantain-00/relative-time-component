@@ -2,7 +2,7 @@ import * as React from 'react'
 import * as ReactDOM from 'react-dom'
 import { RelativeTime } from '../dist/'
 
-class Main extends React.Component<{}, {}> {
+class Main extends React.Component<unknown, unknown> {
   private locale = null
 
   private time1 = Date.now() - 1000 * 60 * 60 * 24 * 365 * 5
