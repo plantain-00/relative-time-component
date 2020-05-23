@@ -8,7 +8,7 @@ export * from 'relative-time-component'
 export class RelativeTime extends React.PureComponent<{
   time: Date | number;
   locale?: common.Locale | null;
-}, {}> {
+}, unknown> {
   private get relativeTime() {
     return common.getRelativeTime(this.props.time, this.props.locale)
   }

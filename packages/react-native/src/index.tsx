@@ -9,7 +9,7 @@ export * from 'relative-time-component'
 export class RelativeTime extends React.PureComponent<{
   time: Date | number;
   locale?: common.Locale | null;
-}, {}> {
+}, unknown> {
   public state = {
     relativeTime: '',
     title: '',
