@@ -1,5 +1,4 @@
 const tsFiles = `"packages/@(core|vue|react|react-native)/@(src|demo)/**/*.@(ts|tsx)"`
-const jsFiles = `"*.config.js"`
 const excludeTsFiles = `"packages/@(core|vue|react|react-native)/@(src|demo)/**/*.@(d|config).ts"`
 
 const vueTemplateCommand = `file2variable-cli --config packages/vue/src/file2variable.config.ts`
@@ -43,14 +42,13 @@ module.exports = {
     revStaticCommand
   ],
   lint: {
-    ts: `eslint --ext .js,.ts ${tsFiles} ${jsFiles}`,
+    ts: `eslint --ext .js,.ts ${tsFiles}`,
     export: `no-unused-export ${tsFiles} --exclude ${excludeTsFiles}`,
-    commit: `commitlint --from=HEAD~1`,
     markdown: `markdownlint README.md`,
     typeCoverage: 'lerna exec -- type-coverage -p src --strict'
   },
   test: [],
-  fix: `eslint --ext .js,.ts ${tsFiles} ${jsFiles} --fix`,
+  fix: `eslint --ext .js,.ts ${tsFiles} --fix`,
   watch: {
     vueTemplateCommand: `${vueTemplateCommand} --watch`,
     tscCoreSrcCommand: `${tscCoreSrcCommand} --watch`,
