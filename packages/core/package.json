@@ -1,6 +1,6 @@
 {
   "name": "relative-time-component",
-  "version": "4.6.1",
+  "version": "5.0.0",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "description": "A auto-updated vuejs and reactjs relative time component.",
