@@ -25,5 +25,8 @@
   "devDependencies": {
     "@types/react": "16.9.50",
     "@types/react-native": "0.63.23"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
   }
 }
