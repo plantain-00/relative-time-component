@@ -19,8 +19,7 @@
   "homepage": "https://github.com/plantain-00/relative-time-component#readme",
   "dependencies": {
     "relative-time-component": "^4.6.1",
-    "vue": "2",
-    "vue-class-component": "7"
+    "vue": "3"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"

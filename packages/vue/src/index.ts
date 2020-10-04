@@ -1,51 +1,57 @@
-import Vue from 'vue'
-import Component from 'vue-class-component'
+import { defineComponent } from 'vue'
 import * as common from 'relative-time-component'
 export * from 'relative-time-component'
-import { indexTemplateHtml, indexTemplateHtmlStatic } from './variables'
+import { indexTemplateHtml } from './variables'
 
-@Component({
+/**
+ * @public
+ */
+export const RelativeTime = defineComponent({
   render: indexTemplateHtml,
-  staticRenderFns: indexTemplateHtmlStatic,
-  props: ['time', 'locale']
-})
-export class RelativeTime extends Vue {
-  time!: Date | number
-  locale!: common.Locale | null
-
-  get title() {
-    return common.format(this.time)
-  }
-  private get relativeTime() {
-    return common.getRelativeTime(this.time, this.locale, this.forceUpdateFlag)
-  }
-  private timer!: number
-  private isHovering = false
-  private forceUpdateFlag = false
-
-  get timeText() {
-    return this.isHovering ? this.title : this.relativeTime
-  }
-
+  props: {
+    time: {
+      type: null,
+      required: true,
+    },
+    locale: {
+      type: null,
+      required: true,
+    },
+  },
+  data: () => {
+    return {
+      timer: undefined as number | undefined,
+      isHovering: false,
+      forceUpdateFlag: false,
+    }
+  },
+  computed: {
+    title(): string {
+      return common.format(this.time)
+    },
+    relativeTime(): string {
+      return common.getRelativeTime(this.time, this.locale, this.forceUpdateFlag)
+    },
+    timeText(): string {
+      return this.isHovering ? this.title : this.relativeTime
+    },
+  },
   beforeMount() {
     this.timer = setInterval(() => {
       this.forceUpdateFlag = !this.forceUpdateFlag
     }, 60 * 1000)
-  }
-
-  beforeDestroy() {
+  },
+  beforeUnmount() {
     if (this.timer) {
       clearInterval(this.timer)
     }
+  },
+  methods: {
+    mouseenter() {
+      this.isHovering = true
+    },
+    mouseleave() {
+      this.isHovering = false
+    }
   }
-
-  mouseenter() {
-    this.isHovering = true
-  }
-
-  mouseleave() {
-    this.isHovering = false
-  }
-}
-
-Vue.component('relative-time', RelativeTime)
+})
