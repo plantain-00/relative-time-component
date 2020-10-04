@@ -1,6 +1,6 @@
 {
   "name": "relative-time-react-component",
-  "version": "4.6.1",
+  "version": "5.0.0",
   "main": "dist/relative-time-react-component.min.js",
   "module": "dist/index.js",
   "unpkg": "dist/relative-time-react-component.min.js",
@@ -19,7 +19,7 @@
   "homepage": "https://github.com/plantain-00/relative-time-component#readme",
   "dependencies": {
     "react": "16",
-    "relative-time-component": "^4.6.1"
+    "relative-time-component": "^5.0.0"
   },
   "devDependencies": {
     "@types/react": "16.9.50",

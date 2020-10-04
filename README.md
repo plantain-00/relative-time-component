@@ -26,7 +26,8 @@ A auto-updated vuejs, reactjs and react-native relative time component.
 `npm i relative-time-vue-component`
 
 ```ts
-import "relative-time-vue-component";
+import { RelativeTime } from "relative-time-vue-component";
+app.component('relative-time', RelativeTime)
 ```
 
 or
@@ -119,6 +120,14 @@ type Locale = {
 ```
 
 ## change logs
+
+```ts
+// v4 vue2
+import "relative-time-vue-component";
+// v5 vue3
+import { RelativeTime } from "relative-time-vue-component";
+app.component('relative-time', RelativeTime)
+```
 
 ```bash
 # v3

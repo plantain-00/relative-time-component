@@ -1,6 +1,6 @@
 {
   "name": "relative-time-vue-component",
-  "version": "4.6.1",
+  "version": "5.0.1",
   "main": "dist/relative-time-vue-component.min.js",
   "module": "dist/index.js",
   "unpkg": "dist/relative-time-vue-component.min.js",
@@ -18,9 +18,8 @@
   },
   "homepage": "https://github.com/plantain-00/relative-time-component#readme",
   "dependencies": {
-    "relative-time-component": "^4.6.1",
-    "vue": "2",
-    "vue-class-component": "7"
+    "relative-time-component": "^5.0.0",
+    "vue": "3"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
