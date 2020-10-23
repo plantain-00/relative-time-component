@@ -18,13 +18,13 @@
     "dist"
   ],
   "dependencies": {
-    "react": "16",
+    "react": "17",
     "react-native": "*",
     "relative-time-component": "^5.0.0"
   },
   "devDependencies": {
     "@types/react": "16.9.53",
-    "@types/react-native": "0.63.25"
+    "@types/react-native": "0.63.30"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
