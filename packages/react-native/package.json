@@ -23,7 +23,7 @@
     "relative-time-component": "^5.0.0"
   },
   "devDependencies": {
-    "@types/react": "16.9.53",
+    "@types/react": "16.9.55",
     "@types/react-native": "0.63.30"
   },
   "publishConfig": {
