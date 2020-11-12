@@ -1,5 +1,11 @@
 # Change Log
 
+## [5.0.2](https://github.com/plantain-00/relative-time-component/compare/v5.0.1...v5.0.2) (2020-11-12)
+  
+* refactor: move devDependencies to root ([986a610](https://github.com/plantain-00/relative-time-component/commit/986a610ff4fcc8b73d8c7f28c170dc0d6dabfbf0))
+* chore: update dependencies ([0803ddc](https://github.com/plantain-00/relative-time-component/commit/0803ddcbcb27c9b1e5659b5401bfb93562441748)) ([ae82481](https://github.com/plantain-00/relative-time-component/commit/ae82481698d8b537ddec8f759b07bbc037c584d9)) ([7608add](https://github.com/plantain-00/relative-time-component/commit/7608add89407ef28cf71e3877af3a2e86c4e41e7)) ([262c066](https://github.com/plantain-00/relative-time-component/commit/262c0664044bad6c0bc7efc76fa78f0439d6b0e1)) ([46516f5](https://github.com/plantain-00/relative-time-component/commit/46516f546feb20ec389102fc41853c7ded7f8f23))
+* docs: remove unused vue-class-component ([6b69d6c](https://github.com/plantain-00/relative-time-component/commit/6b69d6c47a71e9b1eb21d10a41ef0e2ab41d9063))
+
 ## [5.0.1](https://github.com/plantain-00/relative-time-component/compare/v5.0.0...v5.0.1) (2020-10-04)
   
 * fix: missing publishconfig ([2a1e28b](https://github.com/plantain-00/relative-time-component/commit/2a1e28b4c21d4e5f0984800be4eefd97b49c8dd7))
