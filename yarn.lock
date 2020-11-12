@@ -4852,14 +4852,14 @@ npm-run-path@^4.0.0:
     path-key "^3.0.0"
 
 npm-version-cli@2:
-  version "2.3.1"
-  resolved "https://registry.yarnpkg.com/npm-version-cli/-/npm-version-cli-2.3.1.tgz#f91c47ffeb08f5736038022d323ec4ab58f530f9"
-  integrity sha512-TTxUgXTkM0zf3P+2Eqb/9n1RcD24BP47uMvZZXW3M6ujzQhXQu3hm+JaWO1Ta+wrub76sPgarqwcCGIjeuHaUA==
+  version "2.3.2"
+  resolved "https://registry.yarnpkg.com/npm-version-cli/-/npm-version-cli-2.3.2.tgz#75d00bea9b6fd17fe70739debe1cb7bef685180d"
+  integrity sha512-G9vtKGOHIFTCKwtZ+JL5CUdEupvP89Krpt5kdTFTDuywnFZYtNKjDVJkbSp21Sc+MNhxot34O5e4rj7/FSzozg==
   dependencies:
     git-commits-to-changelog "1"
-    glob "7"
     inquirer "7"
     minimist "1"
+    package-dependency-collect "1"
     semver "7"
     tslib "1 || 2"
     xml-js "1"
@@ -5052,6 +5052,14 @@ p-try@^2.0.0:
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/p-try/-/p-try-2.2.0.tgz#cb2868540e313d61de58fafbe35ce9004d5540e6"
   integrity sha512-R4nPAVTAU0B9D35/Gk3uJf/7XYbQcyohSKdvAxIRSNghFl4e71hVoGnBNQz9cWaXxO2I10KTC+3jMdvvoKw6dQ==
+
+package-dependency-collect@1:
+  version "1.10.1"
+  resolved "https://registry.yarnpkg.com/package-dependency-collect/-/package-dependency-collect-1.10.1.tgz#c5fe93ec5385de605fac671be6ab8960c1cb267c"
+  integrity sha512-P6Zq90MTQbCsn1o1vWwP48clCCcjp97efhT09n1qUUx9L/48jv78L9g4y22pDe6SnHEiJ/4CrWcjqlC6RwyeSQ==
+  dependencies:
+    glob "7"
+    tslib "1 || 2"
 
 param-case@^2.1.1:
   version "2.1.1"

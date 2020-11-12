@@ -1,6 +1,6 @@
 {
   "name": "relative-time-vue-component",
-  "version": "5.0.1",
+  "version": "5.0.2",
   "main": "dist/relative-time-vue-component.min.js",
   "module": "dist/index.js",
   "unpkg": "dist/relative-time-vue-component.min.js",

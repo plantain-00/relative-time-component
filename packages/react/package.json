@@ -1,6 +1,6 @@
 {
   "name": "relative-time-react-component",
-  "version": "5.0.0",
+  "version": "5.0.2",
   "main": "dist/relative-time-react-component.min.js",
   "module": "dist/index.js",
   "unpkg": "dist/relative-time-react-component.min.js",
@@ -20,11 +20,6 @@
   "dependencies": {
     "react": "17",
     "relative-time-component": "^5.0.0"
-  },
-  "devDependencies": {
-    "@types/react": "16.9.56",
-    "@types/react-dom": "16.9.9",
-    "react-dom": "17.0.1"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
