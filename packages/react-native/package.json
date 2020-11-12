@@ -22,10 +22,6 @@
     "react-native": "*",
     "relative-time-component": "^5.0.0"
   },
-  "devDependencies": {
-    "@types/react": "16.9.56",
-    "@types/react-native": "0.63.33"
-  },
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   }
