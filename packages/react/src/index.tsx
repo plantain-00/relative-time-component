@@ -15,7 +15,7 @@ export class RelativeTime extends React.PureComponent<{
   private get title() {
     return common.format(this.props.time)
   }
-  private timer!: number
+  private timer!: ReturnType<typeof setInterval>
   private isHovering = false
 
   private get timeText() {
