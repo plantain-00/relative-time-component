@@ -20,7 +20,7 @@ export const RelativeTime = defineComponent({
   },
   data: () => {
     return {
-      timer: undefined as number | undefined,
+      timer: undefined as ReturnType<typeof setInterval> | undefined,
       isHovering: false,
       forceUpdateFlag: false,
     }
